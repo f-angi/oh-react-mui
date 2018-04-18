@@ -1,0 +1,17 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "func-names": ["error", "never"],
+    "semi": 2,
+    "linebreak-style": 0
+  },
+  "plugins": [
+    "react"
+  ],
+  "env": {
+    "browser": true
+  },
+  "ecmaFeatures": {
+    "jsx": true
+  }
+}
