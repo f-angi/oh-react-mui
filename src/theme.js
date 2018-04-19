@@ -6,12 +6,12 @@ const Theme = {
       dark: '#c30019',
       contrastText: '#ffffff',
     },
-    // secondary: {
-    //   light: '#ffffff',
-    //   main: '#dfe8df',
-    //   dark: '#adb6ad',
-    //   contrastText: '#000000',
-    // },
+    secondary: {
+      light: '#ffffff',
+      main: '#e0e0e0',
+      dark: '#aeaeae',
+      contrastText: '#000000',
+    },
   },
 };
 

@@ -10,7 +10,8 @@
     "react-router-last-location": "^1.1.0",
     "prop-types": "^15.6.1",
     "eslint-config-react-app": "^2.1.0",
-    "material-ui": "^1.0.0-beta.42"
+    "material-ui": "^1.0.0-beta.42",
+    "@material-ui/icons": "^1.0.0-beta.42"
   },
   "scripts": {
     "start": "react-scripts start",
