@@ -6,6 +6,7 @@ import { withStyles } from 'material-ui/styles';
 import Header from '../../components/Header';
 import WelcomeBar from '../../components/WelcomeBar';
 import DashboardMaterials from '../../components/DashboardMaterials';
+import DashboardCalendar from '../../components/DashboardCalendar';
 import { Grid, Paper } from 'material-ui';
 
 const styles = theme => ({
@@ -24,11 +25,12 @@ const AppFrame = props => (
       <Header username={props.username} hospitalName={props.hospitalName} />
       <Paper elevation={4} className={props.classes.appFramePaper}>
         <WelcomeBar />
-        <Grid container>
+        <Grid container justify="space-between">
           <Grid item xs={6}>
             <DashboardMaterials />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={5}>
+            <DashboardCalendar />
           </Grid>
         </Grid>
       </Paper>
