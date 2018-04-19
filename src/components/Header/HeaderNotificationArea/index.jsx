@@ -23,18 +23,4 @@ const HeaderNotificationArea = props => (
   </Grid>
 );
 
-// AppFrame.defaultProps = {
-//   classes: {},
-//   title: 'HelpDesk',
-//   breadcrumbs: [],
-//   children: null,
-// };
-//
-// AppFrame.propTypes = {
-//   breadcrumbs: PropTypes.arrayOf(PropTypes.any),
-//   children: PropTypes.node,
-//   classes: PropTypes.objectOf(PropTypes.any),
-//   title: PropTypes.string,
-// };
-
 export default withStyles(styles)(HeaderNotificationArea);

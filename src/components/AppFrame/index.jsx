@@ -4,23 +4,37 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 
 import Header from '../../components/Header';
+import WelcomeBar from '../../components/WelcomeBar';
+import DashboardMaterials from '../../components/DashboardMaterials';
+import { Grid, Paper } from 'material-ui';
 
 const styles = theme => ({
-  mainPaper: {
-    background: theme.palette.background.contentFrame,
-    padding: theme.spacing.unit * 4,
-  },
-  mainContainer: {
-    [theme.breakpoints.up('lg')]: {
-      marginTop: -140,
-    },
-  },
+  appFramePaper:
+      theme.mixins.gutters({
+        paddingTop: 16,
+        paddingBottom: 16,
+        marginTop: theme.spacing.unit * 3,
+        backgroundColor: theme.palette.secondary.main,
+      }),
 });
 
 const AppFrame = props => (
-  <div>
-    <Header username={props.username} hospitalName={props.hospitalName} />
-  </div>
+  <Grid container justify="center" alignItems="stretch">
+    <Grid item xs={10}>
+      <Header username={props.username} hospitalName={props.hospitalName} />
+      <Paper elevation={4} className={props.classes.appFramePaper}>
+        <WelcomeBar />
+        <Grid container>
+          <Grid item xs={6}>
+            <DashboardMaterials />
+          </Grid>
+          <Grid item xs={6}>
+          </Grid>
+        </Grid>
+      </Paper>
+    </Grid>
+  </Grid>
+
 );
 
 // AppFrame.defaultProps = {
