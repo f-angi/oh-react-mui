@@ -25,11 +25,11 @@ const AppFrame = props => (
       <Header username={props.username} hospitalName={props.hospitalName} />
       <Paper elevation={4} className={props.classes.appFramePaper}>
         <WelcomeBar />
-        <Grid container justify="space-between">
+        <Grid container justify="space-between" spacing={40}>
           <Grid item xs={6}>
             <DashboardMaterials />
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={6}>
             <DashboardCalendar />
           </Grid>
         </Grid>

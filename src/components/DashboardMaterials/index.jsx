@@ -1,10 +1,17 @@
 import React from 'react';
 
 import { withStyles } from 'material-ui/styles';
+import DashboardSection from '../DashboardSection';
 import DashboardMaterial from './DashboardMaterial';
-import { AppBar, Button, Grid, Paper, Tab, Tabs, Typography } from 'material-ui';
+import { AppBar, Button, Grid, Tab, Tabs } from 'material-ui';
 
-const styles = theme => ({});
+const styles = theme => ({
+  root: theme.mixins.gutters({
+    paddingTop: 16,
+    paddingBottom: 16,
+    marginTop: theme.spacing.unit * 3,
+  }),
+});
 
 const materials = [
   {
@@ -26,9 +33,7 @@ const materials = [
 
 
 const DashboardMaterials = props => (
-  <div>
-    <Typography variant="body2" color="textSecondary">MATERIALS ARE RUNNING OUT</Typography>
-    <Paper elevation={8}>
+    <DashboardSection title="Materials are running out">
       <AppBar position="static" color="secondary" elevation={0}>
         <Tabs
           indicatorColor="primary"
@@ -46,8 +51,7 @@ const DashboardMaterials = props => (
         </Grid>
       </Grid>
       <br />
-    </Paper>
-  </div>
+    </DashboardSection>
 );
 
 export default withStyles(styles)(DashboardMaterials);
