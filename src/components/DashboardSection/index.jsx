@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { withStyles } from 'material-ui/styles';
-import { Paper, Typography } from 'material-ui';
+import { Grid, Paper, Typography } from 'material-ui';
 
 const styles = theme => ({
   root: theme.mixins.gutters({
@@ -12,10 +12,17 @@ const styles = theme => ({
 });
 
 const DashboardSection = (props) => {
-  const { classes, title, children } = props;
+  const { classes, title, controlComponent, children } = props;
   return (
     <Paper className={classes.root} elevation={8}>
-      <Typography variant="title" color="textSecondary"><strong>{title}</strong></Typography>
+      <Grid container justify="space-between">
+        <Grid item>
+          <Typography variant="title" color="textSecondary"><strong>{title}</strong></Typography>
+        </Grid>
+        <Grid item>
+            {controlComponent}
+        </Grid>
+      </Grid>
       <br />
       {children}
     </Paper>
