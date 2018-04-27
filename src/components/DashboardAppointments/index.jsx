@@ -10,8 +10,11 @@ const styles = theme => ({
   root: theme.mixins.gutters({
     paddingTop: 16,
     paddingBottom: 16,
-    marginTop: theme.spacing.unit * 3,
+    marginTop: theme.spacing.unit * 2,
     textAlign: 'center',
+  }),
+  appointments: theme.mixins.gutters({
+    marginBottom: theme.spacing.unit * 3,
   }),
 });
 
@@ -36,7 +39,9 @@ const appointments = [
 
 const DashboardAppointments = props => (
   <DashboardSection title="Appointments" controlComponent={<SelectTimeRange />}>
-    {appointments.map(appointment => <DashboardAppointment appointment={appointment} />)}
+    <Paper elevation={0} className={props.classes.appointments}>
+      {appointments.map(appointment => <DashboardAppointment appointment={appointment} />)}
+    </Paper>
     <Divider />
     <br />
     <Typography variant="title" color="textSecondary"><strong>Summary</strong></Typography>
