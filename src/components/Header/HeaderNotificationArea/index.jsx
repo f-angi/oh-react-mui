@@ -2,8 +2,10 @@ import React from 'react';
 
 import { withStyles } from 'material-ui/styles';
 import { Badge, Grid } from 'material-ui';
-import MailIcon from '@material-ui/icons/Mail';
-import FaceIcon from '@material-ui/icons/Face';
+import ChatIcon from '@material-ui/icons/Chat';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import EventNoteIcon from '@material-ui/icons/EventNote';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 const styles = theme => ({
   marginTop: {
@@ -15,10 +17,16 @@ const styles = theme => ({
 const HeaderNotificationArea = props => (
   <Grid container justify="flexEnd" spacing={24}>
     <Grid item>
-      <Badge color="primary" badgeContent={4}><MailIcon /></Badge>
+      <Badge color="primary" badgeContent={4}><NotificationsIcon /></Badge>
     </Grid>
     <Grid item>
-      <Badge><FaceIcon /></Badge>
+      <Badge><ChatIcon /></Badge>
+    </Grid>
+    <Grid item>
+      <Badge><EventNoteIcon /></Badge>
+    </Grid>
+    <Grid item>
+      <Badge><SettingsIcon /></Badge>
     </Grid>
   </Grid>
 );

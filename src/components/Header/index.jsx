@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 
 import Grid from 'material-ui/Grid';
@@ -10,6 +9,8 @@ import Typography from 'material-ui/Typography';
 import HeaderLinks from './HeaderLinks';
 import HeaderNotificationArea from './HeaderNotificationArea';
 import HeaderSearch from './HeaderSearch';
+import ModeEditIcon from '@material-ui/icons/ModeEdit';
+import { IconButton } from 'material-ui';
 
 const styles = theme => ({
   header: {
@@ -30,6 +31,8 @@ const styles = theme => ({
 
 const Header = (props) => {
   const { username, hospitalName, classes } = props;
+  const editModeIconStyle = { fontSize: 15 };
+  const editModeButtonStyle = { height: 22, width: 22 };
 
   return (
     <AppBar position="static" className={classes.extraHeight} elevation={4} color="secondary">
@@ -45,10 +48,20 @@ const Header = (props) => {
                   <Grid item xs={8}>
                     <Grid container direction="column">
                       <Grid item>
-                        <Typography variant="body1">{props.hospitalName}</Typography>
+                        <Grid container alignItems="flex-end">
+                          <Grid item>
+                            <Typography variant="body1">{props.hospitalName}&nbsp;</Typography>
+                          </Grid>
+                          <Grid item>
+                            <IconButton style={editModeButtonStyle}>
+                              <ModeEditIcon style={editModeIconStyle} />
+                            </IconButton>
+                          </Grid>
+                        </Grid>
                       </Grid>
                       <Grid item>
-                        <Typography variant="subheading">Welcome back, <strong>{props.username}</strong>
+                        <Typography variant="subheading">Welcome
+                                                    back, <strong>{props.username}</strong>
                         </Typography>
                       </Grid>
                     </Grid>
@@ -61,7 +74,9 @@ const Header = (props) => {
               <Grid item>
                 <Grid container alignItems="center">
                   <Grid item xs={7}>
-                    <HeaderLinks links={['Dashboard', 'Patient database', 'Colleagues database', 'Pharmacy', 'Ward', 'Billing', 'News']} />
+                    <HeaderLinks
+                      links={['Dashboard', 'Patient database', 'Colleagues database', 'Pharmacy', 'Ward', 'Billing', 'News']}
+                    />
                   </Grid>
                   <Grid item xs={1}>&nbsp;</Grid>
                   <Grid item xs={4}>
