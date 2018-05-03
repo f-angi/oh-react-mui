@@ -10,6 +10,7 @@ import DashboardPatientSearch from '../../components/DashboardPatientSearch';
 import DashboardMaterials from '../../components/DashboardMaterials';
 import DashboardCalendar from '../../components/DashboardCalendar';
 import DashboardAppointments from '../../components/DashboardAppointments';
+import ChatFloatingPopup from '../../components/ChatFloatingPopup';
 import { Grid, Paper } from 'material-ui';
 
 const styles = theme => ({
@@ -23,39 +24,42 @@ const styles = theme => ({
 });
 
 const AppFrame = props => (
-  <Grid container justify="center" alignItems="stretch">
-    <Grid item xs={10}>
-      <Header username={props.username} hospitalName={props.hospitalName} />
-      <Paper elevation={4} className={props.classes.appFramePaper}>
-        <WelcomeBar />
-        <Grid container>
-          <Grid container justify="space-around" spacing={24}>
-            <Grid item sm={12} md={6}>
-              <DashboardPatientRegistration />
+  <div>
+    <Grid container justify="center" alignItems="stretch">
+      <Grid item xs={10}>
+        <Header username={props.username} hospitalName={props.hospitalName} />
+        <Paper elevation={4} className={props.classes.appFramePaper}>
+          <WelcomeBar />
+          <Grid container>
+            <Grid container justify="space-around" spacing={24}>
+              <Grid item sm={12} md={6}>
+                <DashboardPatientRegistration />
+              </Grid>
+              <Grid item sm={12} md={6}>
+                <DashboardPatientSearch />
+              </Grid>
             </Grid>
-            <Grid item sm={12} md={6}>
-              <DashboardPatientSearch />
-            </Grid>
-          </Grid>
-          <Grid container justify="space-around" spacing={24}>
-            <Grid item sm={12} md={6}>
-              <DashboardMaterials />
-            </Grid>
-            <Grid item sm={12} md={6}>
-              <Grid container direction="column">
-                <Grid item sm={12}>
-                  <DashboardCalendar />
-                </Grid>
-                <Grid item sm={12}>
-                  <DashboardAppointments />
+            <Grid container justify="space-around" spacing={24}>
+              <Grid item sm={12} md={6}>
+                <DashboardMaterials />
+              </Grid>
+              <Grid item sm={12} md={6}>
+                <Grid container direction="column">
+                  <Grid item sm={12}>
+                    <DashboardCalendar />
+                  </Grid>
+                  <Grid item sm={12}>
+                    <DashboardAppointments />
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-      </Paper>
+        </Paper>
+      </Grid>
     </Grid>
-  </Grid>
+    <ChatFloatingPopup />
+  </div>
 
 );
 
