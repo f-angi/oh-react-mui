@@ -1,3 +1,20 @@
+// const Theme = {
+//   palette: {
+//     primary: {
+//       light: '#ff7c6d',
+//       main: '#fe4641',
+//       dark: '#c30019',
+//       contrastText: '#ffffff',
+//     },
+//     secondary: {
+//       light: '#ffffff',
+//       main: '#e0e0e0',
+//       dark: '#aeaeae',
+//       contrastText: '#000000',
+//     },
+//   },
+// };
+
 const Theme = {
   palette: {
     primary: {
@@ -8,11 +25,12 @@ const Theme = {
     },
     secondary: {
       light: '#ffffff',
-      main: '#e0e0e0',
-      dark: '#aeaeae',
+      main: '#cfd8dc',
+      dark: '#9ea7aa',
       contrastText: '#000000',
     },
   },
 };
+
 
 export default Theme;

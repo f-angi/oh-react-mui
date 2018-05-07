@@ -18,7 +18,7 @@ const DashboardRegistration = props => (
         <AccountCircle style={{ fontSize: 100 }} color="primary" />
       </Grid>
       <Grid item xs={6}>
-        <Button variant="raised" size="large">Register a new patient</Button>
+        <Button variant="raised" size="large" color="secondary">Register a new patient</Button>
       </Grid>
     </Grid>
   </DashboardSection>

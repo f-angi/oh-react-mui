@@ -15,7 +15,7 @@ const DashboardSearch = props => (
         <SearchIcon style={{ fontSize: 100 }} color="primary" />
       </Grid>
       <Grid item xs={6}>
-        <Button variant="raised" size="large">Search for patients</Button>
+        <Button variant="raised" size="large" color="secondary">Search for patients</Button>
       </Grid>
     </Grid>
   </DashboardSection>
