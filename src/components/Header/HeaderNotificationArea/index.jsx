@@ -15,7 +15,7 @@ const styles = theme => ({
 });
 
 const HeaderNotificationArea = props => (
-  <Grid container justify="flexEnd" spacing={24}>
+  <Grid container justify="flex-end" spacing={24}>
     <Grid item>
       <Badge color="primary" badgeContent={4}><NotificationsIcon /></Badge>
     </Grid>

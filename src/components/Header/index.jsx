@@ -7,10 +7,11 @@ import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
 
 import HeaderLinks from './HeaderLinks';
+import HeaderLinksHamburger from './HeaderLinksHamburger';
 import HeaderNotificationArea from './HeaderNotificationArea';
 import HeaderSearch from './HeaderSearch';
 import ModeEditIcon from '@material-ui/icons/ModeEdit';
-import { IconButton } from 'material-ui';
+import { Hidden, IconButton } from 'material-ui';
 
 const styles = theme => ({
   header: {
@@ -19,12 +20,20 @@ const styles = theme => ({
     marginTop: 0,
   },
   extraHeight: {
-    [theme.breakpoints.up('lg')]: {
-      height: 120,
-    },
+    // [theme.breakpoints.up('lg')]: {
+    //   height: 120,
+    // },
   },
   toolbar: {
-    padding: 10,
+    // paddingLeft: 10,
+    // paddingRight: 10,
+    height: '100%',
+  },
+  gridContainerFirstRow: {
+    paddingBottom: 20,
+  },
+  gridItemLogo: {
+    paddingRight: 10,
   },
 });
 
@@ -36,55 +45,65 @@ const Header = (props) => {
 
   return (
     <AppBar position="static" className={classes.extraHeight} elevation={4} color="secondary">
-      <Toolbar className={classes.toolbar}>
-        <Grid container justify="space-between" alignItems="center">
-          <Grid item xs={2}>
-            <img alt="Open Hospital" src="../../logo_OH_small.png" />
-          </Grid>
-          <Grid item xs={10}>
-            <Grid container direction="column">
-              <Grid item>
-                <Grid container alignItems="center">
-                  <Grid item xs={8}>
-                    <Grid container direction="column">
-                      <Grid item>
-                        <Grid container alignItems="flex-end">
-                          <Grid item>
-                            <Typography variant="body1">{props.hospitalName}&nbsp;</Typography>
-                          </Grid>
-                          <Grid item>
-                            <IconButton style={editModeButtonStyle}>
-                              <ModeEditIcon style={editModeIconStyle} />
-                            </IconButton>
-                          </Grid>
-                        </Grid>
+      <Toolbar className={classes.toolbar} disableGutters>
+        <Grid container direction="column" alignItems="stretch" justify="space-between">
+          <Grid item xs={12}>
+            <Grid container alignItems="center" justify="space-between" className={classes.gridContainerFirstRow}>
+              <Grid item sm={12} md={6}>
+                <Grid container alignItems="center" justify="space-between">
+                  <Grid item>
+                    <Grid container alignItems="center">
+                      <Grid item className={classes.gridItemLogo}>
+                        <img alt="Open Hospital" src="../../logo_OH_smaller.png" />
                       </Grid>
                       <Grid item>
-                        <Typography variant="subheading">Welcome
-                                                    back, <strong>{props.username}</strong>
-                        </Typography>
+                        <Grid container direction="column">
+                          <Grid item>
+                            <Grid container alignItems="flex-end">
+                              <Grid item>
+                                <Typography variant="body1">{props.hospitalName}&nbsp;</Typography>
+                              </Grid>
+                              <Grid item>
+                                <IconButton style={editModeButtonStyle}>
+                                  <ModeEditIcon style={editModeIconStyle} />
+                                </IconButton>
+                              </Grid>
+                            </Grid>
+                          </Grid>
+                          <Grid item>
+                            <Typography variant="subheading">Welcome
+                                                        back, <strong>{props.username}</strong>
+                            </Typography>
+                          </Grid>
+                        </Grid>
                       </Grid>
                     </Grid>
                   </Grid>
                   <Grid item>
+                    <Hidden mdUp>
+                      <HeaderLinksHamburger />
+                    </Hidden>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <Grid container alignItems="center" justify="flex-end">
+                  <Grid item xs={12} sm={7}>
+                    <HeaderSearch />
+                  </Grid>
+                  <Grid item xs={12} sm={5}>
                     <HeaderNotificationArea />
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item>
-                <Grid container alignItems="center">
-                  <Grid item xs={7}>
-                    <HeaderLinks
-                      links={['Dashboard', 'Patient database', 'Colleagues database', 'Pharmacy', 'Ward', 'Billing', 'News']}
-                    />
-                  </Grid>
-                  <Grid item xs={1}>&nbsp;</Grid>
-                  <Grid item xs={4}>
-                    <HeaderSearch />
-                  </Grid>
-                </Grid>
-              </Grid>
             </Grid>
+          </Grid>
+          <Grid item md={12}>
+            <Hidden smDown>
+              <HeaderLinks
+                links={['Dashboard', 'Patient database', 'Colleagues database', 'Pharmacy', 'Ward', 'Billing', 'News']}
+              />
+            </Hidden>
           </Grid>
         </Grid>
       </Toolbar>
