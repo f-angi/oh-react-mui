@@ -2,8 +2,8 @@ import React from 'react';
 
 import { withStyles } from 'material-ui/styles';
 import { Badge, Grid } from 'material-ui';
-import ChatIcon from '@material-ui/icons/Chat';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import ChatIcon from '@material-ui/icons/Chat';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import SettingsIcon from '@material-ui/icons/Settings';
 

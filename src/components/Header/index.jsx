@@ -81,21 +81,23 @@ const Header = (props) => {
                   </Grid>
                   <Grid item>
                     <Hidden mdUp>
-                      <HeaderLinksHamburger />
+                      <HeaderLinksHamburger links={['Dashboard', 'Patient database', 'Colleagues database', 'Pharmacy', 'Ward', 'Billing', 'News']} />
                     </Hidden>
                   </Grid>
                 </Grid>
               </Grid>
-              <Grid item xs={12} md={6}>
-                <Grid container alignItems="center" justify="flex-end">
-                  <Grid item xs={12} sm={7}>
-                    <HeaderSearch />
-                  </Grid>
-                  <Grid item xs={12} sm={5}>
-                    <HeaderNotificationArea />
+              <Hidden smDown>
+                <Grid item xs={12} md={6}>
+                  <Grid container alignItems="center" justify="flex-end">
+                    <Grid item xs={12} sm={7}>
+                      <HeaderSearch />
+                    </Grid>
+                    <Grid item xs={12} sm={5}>
+                      <HeaderNotificationArea />
+                    </Grid>
                   </Grid>
                 </Grid>
-              </Grid>
+              </Hidden>
             </Grid>
           </Grid>
           <Grid item md={12}>
