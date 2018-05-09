@@ -30,7 +30,7 @@ const styles = theme => ({
     height: '100%',
   },
   gridContainerFirstRow: {
-    paddingBottom: 20,
+    height: 80,
   },
   gridItemLogo: {
     paddingRight: 10,
@@ -87,15 +87,8 @@ const Header = (props) => {
                 </Grid>
               </Grid>
               <Hidden smDown>
-                <Grid item xs={12} md={6}>
-                  <Grid container alignItems="center" justify="flex-end">
-                    <Grid item xs={12} sm={7}>
-                      <HeaderSearch />
-                    </Grid>
-                    <Grid item xs={12} sm={5}>
-                      <HeaderNotificationArea />
-                    </Grid>
-                  </Grid>
+                <Grid item xs={12} sm={6}>
+                  <HeaderNotificationArea />
                 </Grid>
               </Hidden>
             </Grid>

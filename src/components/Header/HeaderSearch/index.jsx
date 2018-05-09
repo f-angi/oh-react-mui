@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import SearchIcon from '@material-ui/icons/Search';
 import { withStyles } from 'material-ui/styles';
 import { FormControl } from 'material-ui/Form/index';
-import { IconButton, Input } from 'material-ui';
+import { Grid, IconButton, Input, Slide } from 'material-ui';
 import { InputAdornment } from 'material-ui/Input/index';
 
 
@@ -19,32 +19,30 @@ class HeaderSearch extends React.Component {
     super(props);
 
     this.state = {
-      value: '',
+      displayInput: false,
     };
   }
 
   render() {
     return (
-      <FormControl className={this.props.classes.form }>
-        <Input
-          type="text"
-          value={this.state.value}
-          onChange={e => this.setState({ ...this.state, value: e.target.value })}
-          onKeyPress={(e) => {
-                        if (e.key === 'Enter') {
-                            this.props.onSearch(this.state.value);
-                        }
-                    }}
-          placeholder={this.props.placeholder}
-          startAdornment={
-            <InputAdornment position="start">
-              <IconButton>
-                <SearchIcon />
-              </IconButton>
-            </InputAdornment>
-                    }
-        />
-      </FormControl>
+      <Grid container alignItems="center" justify="flex-end">
+        <Grid item>
+          <Slide direction="down" in={this.state.displayInput} mountOnEnter unmountOnExit>
+            <FormControl className={this.props.classes.form}>
+              <Input
+                type="text"
+                value={this.state.value}
+                placeholder={this.props.placeholder}
+              />
+            </FormControl>
+          </Slide>
+        </Grid>
+        <Grid item>
+          <IconButton onClick={() => this.setState({ displayInput: !this.state.displayInput })}>
+            <SearchIcon />
+          </IconButton>
+        </Grid>
+      </Grid>
     );
   }
 }
