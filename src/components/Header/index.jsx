@@ -49,7 +49,7 @@ const Header = (props) => {
         <Grid container direction="column" alignItems="stretch" justify="space-between">
           <Grid item xs={12}>
             <Grid container alignItems="center" justify="space-between" className={classes.gridContainerFirstRow}>
-              <Grid item sm={12} md={6}>
+              <Grid item xs={12} md={6}>
                 <Grid container alignItems="center" justify="space-between">
                   <Grid item>
                     <Grid container alignItems="center">
@@ -79,11 +79,11 @@ const Header = (props) => {
                       </Grid>
                     </Grid>
                   </Grid>
-                  <Grid item>
-                    <Hidden mdUp>
+                  <Hidden mdUp>
+                    <Grid item>
                       <HeaderLinksHamburger links={['Dashboard', 'Patient database', 'Colleagues database', 'Pharmacy', 'Ward', 'Billing', 'News']} />
-                    </Hidden>
-                  </Grid>
+                    </Grid>
+                  </Hidden>
                 </Grid>
               </Grid>
               <Hidden smDown>
@@ -93,13 +93,13 @@ const Header = (props) => {
               </Hidden>
             </Grid>
           </Grid>
-          <Grid item md={12}>
-            <Hidden smDown>
+          <Hidden smDown>
+            <Grid item md={12}>
               <HeaderLinks
                 links={['Dashboard', 'Patient database', 'Colleagues database', 'Pharmacy', 'Ward', 'Billing', 'News']}
               />
-            </Hidden>
-          </Grid>
+            </Grid>
+          </Hidden>
         </Grid>
       </Toolbar>
     </AppBar>

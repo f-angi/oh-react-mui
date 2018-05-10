@@ -14,10 +14,10 @@ const styles = (theme) => {};
 const DashboardRegistration = props => (
   <DashboardSection title="Register new patient">
     <Grid container direction="column" justify="space-between" alignItems="center" spacing={40}>
-      <Grid item xs={9}>
+      <Grid item xs={12}>
         <AccountCircle style={{ fontSize: 100 }} color="primary" />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12}>
         <Button variant="raised" size="large" color="secondary">Register a new patient</Button>
       </Grid>
     </Grid>

@@ -26,31 +26,27 @@ const styles = theme => ({
 const AppFrame = props => (
   <div>
     <Grid container justify="center" alignItems="stretch">
-      <Grid item xs={10}>
+      <Grid item xs={12} lg={10}>
         <Header username={props.username} hospitalName={props.hospitalName} />
         <Paper elevation={4} className={props.classes.appFramePaper}>
           <WelcomeBar />
-          <Grid container>
-            <Grid container justify="space-around" spacing={24}>
-              <Grid item sm={12} md={6}>
-                <DashboardPatientRegistration />
-              </Grid>
-              <Grid item sm={12} md={6}>
-                <DashboardPatientSearch />
-              </Grid>
+          <Grid container spacing={24}>
+            <Grid item xs={12} md={6}>
+              <DashboardPatientRegistration />
             </Grid>
-            <Grid container justify="space-around" spacing={24}>
-              <Grid item sm={12} md={6}>
-                <DashboardMaterials />
-              </Grid>
-              <Grid item sm={12} md={6}>
-                <Grid container direction="column">
-                  <Grid item sm={12}>
-                    <DashboardCalendar />
-                  </Grid>
-                  <Grid item sm={12}>
-                    <DashboardAppointments />
-                  </Grid>
+            <Grid item xs={12} md={6}>
+              <DashboardPatientSearch />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <DashboardMaterials />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Grid container direction="column" spacing={24}>
+                <Grid item sm={12}>
+                  <DashboardCalendar />
+                </Grid>
+                <Grid item sm={12}>
+                  <DashboardAppointments />
                 </Grid>
               </Grid>
             </Grid>

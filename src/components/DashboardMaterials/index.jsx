@@ -33,25 +33,25 @@ const materials = [
 
 
 const DashboardMaterials = props => (
-    <DashboardSection title="Materials are running out">
-      <AppBar position="static" color="secondary" elevation={0}>
-        <Tabs
-          indicatorColor="primary"
-          fullWidth
-          value={0}
-        >
-          <Tab label="Running out drugs" />
-          <Tab label="Running out nursing materials" />
-        </Tabs>
-      </AppBar>
-      {materials.map(material => (<DashboardMaterial material={material} />))}
-      <Grid container justify="center">
-        <Grid item>
-          <Button color="primary">See all the materials</Button>
-        </Grid>
+  <DashboardSection title="Materials are running out">
+    <AppBar position="static" color="secondary" elevation={0}>
+      <Tabs
+        indicatorColor="primary"
+        fullWidth
+        value={0}
+      >
+        <Tab label="Running out drugs" />
+        <Tab label="Running out nursing materials" />
+      </Tabs>
+    </AppBar>
+    {materials.map(material => (<DashboardMaterial material={material} />))}
+    <Grid container justify="center">
+      <Grid item>
+        <Button color="primary">See all the materials</Button>
       </Grid>
-      <br />
-    </DashboardSection>
+    </Grid>
+    <br />
+  </DashboardSection>
 );
 
 export default withStyles(styles)(DashboardMaterials);
