@@ -1,15 +1,12 @@
 import React from 'react';
 
-import DashboardSection from '../DashboardSection';
+import AccountCircle from '@material-ui/icons/AccountCircle';
 import { withStyles } from 'material-ui/styles';
-import Calendar from 'material-ui-pickers/DatePicker/Calendar';
-import moment from 'moment';
-import {Button, Grid, Paper, Typography} from 'material-ui';
-import KeyboardArrowLeft from '@material-ui/icons/es/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/es/KeyboardArrowRight';
-import AccountCircle from "@material-ui/icons/es/AccountCircle";
+import { Button, Grid } from 'material-ui';
+import DashboardSection from '../DashboardSection';
 
-const styles = (theme) => {};
+const styles = (theme) => {
+};
 
 const DashboardRegistration = props => (
   <DashboardSection title="Register new patient">

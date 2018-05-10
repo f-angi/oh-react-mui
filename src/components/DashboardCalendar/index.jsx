@@ -4,9 +4,10 @@ import DashboardSection from '../DashboardSection';
 import { withStyles } from 'material-ui/styles';
 import Calendar from 'material-ui-pickers/DatePicker/Calendar';
 import moment from 'moment';
+import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
+import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import { Grid, Paper, Typography } from 'material-ui';
-import KeyboardArrowLeft from '@material-ui/icons/es/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/es/KeyboardArrowRight';
+
 
 const styles = (theme) => {
   const t = theme;
