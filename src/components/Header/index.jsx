@@ -9,7 +9,6 @@ import Typography from 'material-ui/Typography';
 import HeaderLinks from './HeaderLinks';
 import HeaderLinksHamburger from './HeaderLinksHamburger';
 import HeaderNotificationArea from './HeaderNotificationArea';
-import HeaderSearch from './HeaderSearch';
 import ModeEditIcon from '@material-ui/icons/ModeEdit';
 import { Hidden, IconButton } from 'material-ui';
 
