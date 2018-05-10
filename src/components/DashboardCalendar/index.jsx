@@ -22,35 +22,38 @@ const styles = (theme) => {
   });
 };
 
-const DashboardCalendar = props => (
-  <DashboardSection title="Calendar">
-    <Grid container justify="space-between" spacing={40}>
-      <Grid item xs={5}>
-        <Paper elevation={0} className={props.classes.today}>
-          <br /><br /><br />
-          <Typography variant="display1">TODAY</Typography>
-          <br />
-          <Typography variant="title">MAY</Typography>
-          <Typography variant="title">18</Typography>
-          <Typography variant="title">Friday</Typography>
-          <br /> <br />
-          <Typography variant="title">2018</Typography>
-        </Paper>
+const DashboardCalendar = (props) => {
+  const today = moment();
+  return (
+    <DashboardSection title="Calendar">
+      <Grid container justify="space-between" spacing={40}>
+        <Grid item xs={5}>
+          <Paper elevation={0} className={props.classes.today}>
+            <br /><br /><br />
+            <Typography variant="display1">TODAY</Typography>
+            <br />
+            <Typography variant="title">{today.format('MMMM')}</Typography>
+            <Typography variant="title">{today.date()}</Typography>
+            <Typography variant="title">{today.format('dddd')}</Typography>
+            <br /> <br />
+            <Typography variant="title">{today.format('YYYY')}</Typography>
+          </Paper>
+        </Grid>
+        <Grid item xs={7} className={props.classes.calendar}>
+          <Calendar
+            date={moment()}
+            autoOk={false}
+            cancelLabel={false}
+            firstDayOfWeek={1}
+            mode="portrait"
+            leftArrowIcon={<KeyboardArrowLeft />}
+            rightArrowIcon={<KeyboardArrowRight />}
+            open
+          />
+        </Grid>
       </Grid>
-      <Grid item xs={7} className={props.classes.calendar}>
-        <Calendar
-          date={moment('2018-05-12')}
-          autoOk={false}
-          cancelLabel={false}
-          firstDayOfWeek={1}
-          mode="portrait"
-          leftArrowIcon={<KeyboardArrowLeft />}
-          rightArrowIcon={<KeyboardArrowRight />}
-          open
-        />
-      </Grid>
-    </Grid>
-  </DashboardSection>
-);
+    </DashboardSection>
+  );
+};
 
 export default withStyles(styles)(DashboardCalendar);
