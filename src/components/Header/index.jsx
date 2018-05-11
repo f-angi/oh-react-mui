@@ -53,7 +53,7 @@ const Header = (props) => {
                   <Grid item>
                     <Grid container alignItems="center">
                       <Grid item className={classes.gridItemLogo}>
-                        <img alt="Open Hospital" src="../../logo_OH_smaller.png" />
+                        <img alt="Open Hospital" src="./logo_OH_smaller.png" />
                       </Grid>
                       <Grid item>
                         <Grid container direction="column">
