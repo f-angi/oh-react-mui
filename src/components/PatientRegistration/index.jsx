@@ -29,10 +29,27 @@ const styles = theme => ({
     button: {
         margin: theme.spacing.unit,
     },
+    buttonOrange: {
+        margin: theme.spacing.unit,
+        backgroundColor: "rgba(239, 156, 102, 1)",
+        color: "#FFFFFF"
+    },
     formControl: {
         margin: theme.spacing.unit,
         minWidth: 120,
-    }
+    },
+    container: {
+        display: 'flex',
+        flexWrap: 'wrap',
+    },
+    textField: {
+        marginLeft: theme.spacing.unit,
+        marginRight: theme.spacing.unit,
+        width: 200,
+    },
+    menu: {
+        width: 200,
+    },
 });
 
 const bloodGroup = ["", "0+", "0-", "A+", "A-", "B+", "B-", "C+", "C-", "AB+", "AB-"];
@@ -43,7 +60,7 @@ const AppFrame = props => (
             <Grid item xs={12} lg={10}>
                 <Header username={props.username} hospitalName={props.hospitalName}/>
                 <Paper elevation={4} className={props.classes.appFramePaper}>
-                    <WelcomeBar path={"Home / Patient Registration"} txt={""} />
+                    <WelcomeBar path={"Home / Patient Registration"} txt={""}/>
                     <Grid container spacing={24}>
                         <Grid item xs={6} md={2}>
                             <h4>PATIENT REGISTRATION</h4>
@@ -74,10 +91,9 @@ const AppFrame = props => (
                                     {/* FIRST NAME */}
                                     <TextField
                                         required
-                                        id="required"
+                                        id="first-name"
                                         label="First Name"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         margin="normal"
                                         fullWidth
                                     />
@@ -85,13 +101,12 @@ const AppFrame = props => (
                                     {/* AGE */}
                                     <TextField
                                         required
-                                        id="number"
+                                        id="age-yyyy"
                                         label="Age"
-                                        //value={"Years"}
                                         placeholder={"yyyy"}
                                         //onChange={this.handleChange('age')}
                                         type="number"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
@@ -102,13 +117,12 @@ const AppFrame = props => (
                                     {/* AGE BLOCK THREE INPUT */}
                                     <TextField
                                         required
-                                        id="number"
+                                        id="age-mm"
                                         //label="Number"
-                                        //value={"Month"}
                                         placeholder={"mm"}
                                         //onChange={this.handleChange('age')}
                                         type="number"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
@@ -117,13 +131,12 @@ const AppFrame = props => (
                                     />
                                     <TextField
                                         required
-                                        id="number"
+                                        id="age-dd"
                                         //label="Number"
-                                        //value={"Days"}
                                         placeholder={"dd"}
                                         //onChange={this.handleChange('age')}
                                         type="number"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
@@ -132,14 +145,13 @@ const AppFrame = props => (
                                     />
                                     <TextField
                                         required
-                                        id="text"
+                                        id="birthdate"
                                         label="Birthdate"
                                         placeholder={"yyyy/mm/dd"}
-                                        //value={"Days"}
                                         //placeholder={"Days"}
                                         //onChange={this.handleChange('age')}
                                         type="text"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         InputLabelProps={{
                                             //shrink: true,
                                         }}
@@ -151,10 +163,9 @@ const AppFrame = props => (
                                     {/* BIRTHDATE */}
                                     <TextField
                                         required
-                                        id="required"
+                                        id="tax-number"
                                         label="Tax number"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         margin="normal"
                                         fullWidth
                                     />
@@ -162,10 +173,9 @@ const AppFrame = props => (
                                     {/* CITY */}
                                     <TextField
                                         required
-                                        id="required"
+                                        id="city"
                                         label="City"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         margin="normal"
                                         fullWidth
                                     />
@@ -173,10 +183,9 @@ const AppFrame = props => (
                                     {/* CONTACT */}
                                     <TextField
                                         required
-                                        id="required"
+                                        id="contact"
                                         label="Contact"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         margin="normal"
                                         fullWidth
                                     />
@@ -184,50 +193,144 @@ const AppFrame = props => (
                                     {/* NEXT OF KIN */}
                                     <TextField
                                         required
-                                        id="required"
+                                        id="next-of-kin"
                                         label="Next Of Kin"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         margin="normal"
                                         fullWidth
                                     />
                                     <br/>
-                                    {/* BLOOD GROUP SELECT */}
-                                    <FormControl required className={styles.formControl}>
-                                        <InputLabel required htmlFor="age-native-simple">Blood Group</InputLabel>
+                                    {/* SAVE AND START VISIT BUTTON */}
+                                    <Button variant="raised" component="span" className={styles.buttonOrange}>
+                                        Save and start a visit ›
+                                    </Button>
+                                    {/* SAVE THE INFORMATION */}
+                                    <Button variant="raised" component="span" className={styles.button}>
+                                        Save the information ›
+                                    </Button>
+                                </Grid>
+
+                                {/* RIGHT SUBCOLOUMN */}
+                                <Grid item xs={12} sm={6}>
+                                    {/* GALLERY */}
+                                    <Button variant="raised" component="span" className={styles.button}>
+                                        Go to gallery
+                                        <IconButton color="primary" className={styles.button} component="span">
+                                            <InsertPhoto/>
+                                        </IconButton>
+                                    </Button>
+                                    <br/>
+                                    {/* OTHER NAME */}
+                                    <TextField
+                                        required
+                                        id="other-name"
+                                        label="Other Name"
+                                        className={styles.textField}
+                                        margin="normal"
+                                        fullWidth
+                                    />
+                                    <br/>
+                                    {/* SEX SELECT */}
+                                    <FormControl required className={styles.formControl} style={{width: "50%"}}>
+                                        <InputLabel required htmlFor="sex-native-simple">Sex</InputLabel>
                                         <Select
                                             native
-                                            value={""}
+                                            //value={""}
                                             //onChange={this.handleChange('age')}
                                             inputProps={{
-                                                id: 'age-native-simple',
+                                                id: 'sex-native-simple',
+                                            }}
+                                        >
+                                            <option value=""/>
+                                            <option value={"M"}>M</option>
+                                            <option value={"F"}>F</option>
+                                        </Select>
+                                    </FormControl>
+                                    <br/>
+                                    {/* OTHER NUMBER */}
+                                    <TextField
+                                        required
+                                        id="other-number"
+                                        label="Other number"
+                                        className={styles.textField}
+                                        margin="normal"
+                                        fullWidth
+                                    />
+                                    <br/>
+                                    {/* ADDRESS */}
+                                    <TextField
+                                        required
+                                        id="address"
+                                        label="Address"
+                                        className={styles.textField}
+                                        margin="normal"
+                                        fullWidth
+                                    />
+                                    <br/>
+                                    {/* NEXT OF KIN CONTACT */}
+                                    <TextField
+                                        required
+                                        id="next-of-kin-contact"
+                                        label="Next of kin Contact"
+                                        className={styles.textField}
+                                        margin="normal"
+                                        fullWidth
+                                    />
+                                    <br/>
+                                    <h3>Other optional information</h3>
+                                    {/* RELATIONSHIP */}
+                                    <TextField
+                                        id="relationship"
+                                        label="Relationship"
+                                        className={styles.textField}
+                                        margin="normal"
+                                        fullWidth
+                                    />
+                                    <br/>
+                                    {/* INSURANCE */}
+                                    <TextField
+                                        id="insurance"
+                                        label="Insurance"
+                                        className={styles.textField}
+                                        margin="normal"
+                                        fullWidth
+                                    />
+                                    {/* BLOOD GROUP SELECT */}
+                                    <FormControl className={styles.formControl} style={{width: "50%"}}>
+                                        <InputLabel htmlFor="blood-native-simple">Blood Group</InputLabel>
+                                        {/* TODO: Non si vede la selezione perché shiftata a sinistra?*/}
+                                        <Select
+                                            native
+                                            //value={""}
+                                            //onChange={this.handleChange('age')}
+                                            inputProps={{
+                                                id: 'blood-native-simple',
                                             }}
                                         >
                                             {bloodGroup.map((val, index) =>
-                                                <option value={val} key={index}>{val}</option>
+                                                <option value={val} key={index}>{`${val}`}</option>
                                             )}
                                         </Select>
                                     </FormControl>
                                     <br/>
                                     {/* EDUCATIONAL LEVEL */}
                                     <TextField
-                                        id="required"
+                                        id="educational-level"
                                         label="Educational level"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         margin="normal"
                                         fullWidth
                                     />
                                     <br/>
                                     {/* DISTANCE FROM THE HOSPITAL BLOCK THREE INPUT */}
                                     <TextField
-                                        id="number"
+                                        id="distance-house-hospital-dd"
                                         label="Distance of the house from the Hospital"
                                         //value={"Years"}
                                         placeholder={"dd"}
                                         //onChange={this.handleChange('age')}
                                         type="number"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
@@ -236,13 +339,13 @@ const AppFrame = props => (
                                         //inputStyle ={{width: '30%'}}
                                     />
                                     <TextField
-                                        id="number"
+                                        id="distance-house-hospital-hh"
                                         //label="Number"
                                         //value={"Month"}
                                         placeholder={"hh"}
                                         //onChange={this.handleChange('age')}
                                         type="number"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
@@ -250,13 +353,13 @@ const AppFrame = props => (
                                         style={{width: "30%", marginLeft: "2%", marginRight: "2%"}}
                                     />
                                     <TextField
-                                        id="number"
+                                        id="distance-house-hospital-mm"
                                         //label="Number"
                                         //value={"Days"}
                                         placeholder={"mm"}
                                         //onChange={this.handleChange('age')}
                                         type="number"
-                                        //className={classes.textField}
+                                        className={styles.textField}
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
@@ -297,98 +400,6 @@ const AppFrame = props => (
                                             />
                                         }
                                         label="Transport3"
-                                    />
-                                </Grid>
-
-                                {/* RIGHT SUBCOLOUMN */}
-                                <Grid item xs={12} sm={6}>
-                                    {/* GALLERY */}
-                                    <Button variant="raised" component="span" className={styles.button}>
-                                        Go to gallery
-                                        <IconButton color="primary" className={styles.button} component="span">
-                                            <InsertPhoto/>
-                                        </IconButton>
-                                    </Button>
-                                    <br/>
-                                    {/* OTHER NAME */}
-                                    <TextField
-                                        required
-                                        id="required"
-                                        label="Other Name"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
-                                        margin="normal"
-                                        fullWidth
-                                    />
-                                    <br/>
-                                    {/* SEX SELECT */}
-                                    <FormControl required className={styles.formControl}>
-                                        <InputLabel required htmlFor="age-native-simple">Sex</InputLabel>
-                                        <Select
-                                            native
-                                            //value={""}
-                                            //onChange={this.handleChange('age')}
-                                            inputProps={{
-                                                id: 'age-native-simple',
-                                            }}
-                                        >
-                                            <option value=""/>
-                                            <option value={"M"}>M</option>
-                                            <option value={"F"}>F</option>
-                                        </Select>
-                                    </FormControl>
-                                    <br/>
-                                    {/* OTHER NUMBER */}
-                                    <TextField
-                                        required
-                                        id="required"
-                                        label="Other number"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
-                                        margin="normal"
-                                        fullWidth
-                                    />
-                                    <br/>
-                                    {/* ADDRESS */}
-                                    <TextField
-                                        required
-                                        id="required"
-                                        label="Address"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
-                                        margin="normal"
-                                        fullWidth
-                                    />
-                                    <br/>
-                                    {/* NEXT OF KIN CONTACT */}
-                                    <TextField
-                                        required
-                                        id="required"
-                                        label="Next of kin Contact"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
-                                        margin="normal"
-                                        fullWidth
-                                    />
-                                    <br/>
-                                    {/* RELATIONSHIP */}
-                                    <TextField
-                                        id="required"
-                                        label="Relationship"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
-                                        margin="normal"
-                                        fullWidth
-                                    />
-                                    <br/>
-                                    {/* INSURANCE */}
-                                    <TextField
-                                        id="required"
-                                        label="Insurance"
-                                        //defaultValue="First Name"
-                                        //className={classes.textField}
-                                        margin="normal"
-                                        fullWidth
                                     />
                                 </Grid>
                             </Grid>
