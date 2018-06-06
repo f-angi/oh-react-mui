@@ -27,10 +27,10 @@ const HeaderNotificationArea = props => (
       <IconButton><Badge color="primary" badgeContent={8}><ChatIcon /></Badge></IconButton>
     </Grid>
     <Grid item>
-      <IconButton><Badge><EventNoteIcon /></Badge></IconButton>
+      <IconButton><Badge color="primary" badgeContent={8}><EventNoteIcon /></Badge></IconButton>
     </Grid>
     <Grid item>
-      <IconButton><Badge><SettingsIcon /></Badge></IconButton>
+      <IconButton><Badge color="primary" badgeContent={8}><SettingsIcon /></Badge></IconButton>
     </Grid>
   </Grid>
 );

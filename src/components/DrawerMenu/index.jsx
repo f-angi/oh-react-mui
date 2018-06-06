@@ -43,13 +43,13 @@ const DrawerMenu = props => (
                     </ListItem>
                     <ListItem button>
                         <ListItemIcon>
-                            <Badge><EventNoteIcon/></Badge>
+                            <Badge color="primary" badgeContent={8}><EventNoteIcon/></Badge>
                         </ListItemIcon>
                         <ListItemText primary="Calendar"/>
                     </ListItem>
                     <ListItem button>
                         <ListItemIcon>
-                            <Badge><SettingsIcon/></Badge>
+                            <Badge color="primary" badgeContent={8}><SettingsIcon/></Badge>
                         </ListItemIcon>
                         <ListItemText primary="Settings"/>
                     </ListItem>

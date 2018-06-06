@@ -12,7 +12,7 @@ const DashboardMaterial = (props) => {
   return (
     <Card elevation={0}>
       <CardContent>
-        <Grid container spacing={12}>
+        <Grid container spacing={8}>
           <Grid item>
             <WarningIcon color="primary" />
           </Grid>

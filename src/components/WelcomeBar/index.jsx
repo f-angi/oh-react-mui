@@ -13,7 +13,7 @@ const WelcomeBar = props => (
         <HomeIcon />
       </Grid>
       <Grid item>
-        <Typography variant="subheadline">Home</Typography>
+        <Typography variant="subheading">Home</Typography>
       </Grid>
     </Grid>
     <br />

@@ -10,7 +10,6 @@ import {Grid, Paper, Typography} from 'material-ui';
 
 
 const styles = (theme) => {
-    const t = theme;
     return ({
         today: {
             textAlign: 'center',

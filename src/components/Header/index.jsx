@@ -60,7 +60,7 @@ const Header = (props) => {
                           <Grid item>
                             <Grid container alignItems="flex-end">
                               <Grid item>
-                                <Typography variant="body1">{props.hospitalName}&nbsp;</Typography>
+                                <Typography variant="body1">{hospitalName}&nbsp;</Typography>
                               </Grid>
                               <Grid item>
                                 <IconButton style={editModeButtonStyle}>
@@ -70,8 +70,7 @@ const Header = (props) => {
                             </Grid>
                           </Grid>
                           <Grid item>
-                            <Typography variant="subheading">Welcome
-                                                        back, <strong>{props.username}</strong>
+                            <Typography variant="subheading">Welcome back, <strong>{username}</strong>
                             </Typography>
                           </Grid>
                         </Grid>
