@@ -11,7 +11,7 @@ class App extends Component {
         return (
             <MuiPickersUtilsProvider utils={MomentUtils}>
                 <MuiThemeProvider theme={createMuiTheme(theme)}>
-                    <Dashboard username={"Dr. Housee"} hospitalName={"Hospital St. Democrito"}/>
+                    <Dashboard username={"Dr. House"} hospitalName={"Hospital St. Democrito"}/>
                 </MuiThemeProvider>
             </MuiPickersUtilsProvider>
         );

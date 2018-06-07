@@ -96,9 +96,9 @@ const AppFrame = props => (
                                     {/* AGE */}
                                     <TextField
                                         required
-                                        id="age-yyyy"
+                                        id="age-yyy"
                                         label="Age"
-                                        placeholder={"yyyy"}
+                                        placeholder={"Years"}
                                         //onChange={this.handleChange('age')}
                                         type="number"
                                         className={styles.textField}
@@ -114,7 +114,7 @@ const AppFrame = props => (
                                         required
                                         id="age-mm"
                                         //label="Number"
-                                        placeholder={"mm"}
+                                        placeholder={"Months"}
                                         //onChange={this.handleChange('age')}
                                         type="number"
                                         className={styles.textField}
@@ -128,7 +128,7 @@ const AppFrame = props => (
                                         required
                                         id="age-dd"
                                         //label="Number"
-                                        placeholder={"dd"}
+                                        placeholder={"Days"}
                                         //onChange={this.handleChange('age')}
                                         type="number"
                                         className={styles.textField}
@@ -312,10 +312,12 @@ const AppFrame = props => (
                                         fullWidth
                                     />
                                     <br/>
+                                    <h4 style= {{marginTop: "25px"}}
+                                    > Distance of the house from the Hospital</h4>
                                     {/* DISTANCE FROM THE HOSPITAL BLOCK THREE INPUT */}
                                     <TextField
-                                        id="distance-house-hospital-dd"
-                                        label="Distance of the house from the Hospital"
+                                        //id="distance-house-hospital-dd"
+                                        //label="Distance of the house from the Hospital"
                                         //value={"Years"}
                                         placeholder={"dd"}
                                         //onChange={this.handleChange('age')}
@@ -396,12 +398,12 @@ const AppFrame = props => (
                                      <Button variant="raised" component="span" style=
                                     {{marginTop:"15px",
                                     backgroundColor: "rgba(239, 156, 102, 1)",
-                                    color: "#FFFFFF"}}>
+                                    color: "#FFFFFF", width:"45%", marginBottom:"100px"}}>
                                         Save and start a visit >
                                     </Button>
                                     {/* SAVE THE INFORMATION */}
                                     <Button variant="raised" component="span" style=
-                                    {{marginTop:"15px",
+                                    {{marginTop:"15px",marginLeft:"25px", marginBottom:"100px", width:"45%",
                                      borderColor: '#rgba(239, 156, 102, 1)',
                                     color: "rgba(239, 156, 102, 1)"}}>
                                         Save the information ›
