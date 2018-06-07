@@ -367,6 +367,7 @@ const AppFrame = props => (
                                                 //onChange={this.handleChange('checkedB')}
                                                 value="Transport1"
                                                 color="primary"
+                                                style={{width: "33%", marginLeft:"20%"}}
                                             />
                                         }
                                         label="Transport"
@@ -378,6 +379,7 @@ const AppFrame = props => (
                                                 //onChange={this.handleChange('checkedB')}
                                                 value="Transport2"
                                                 color="primary"
+                                                style={{width: "33%", marginLeft:"60%"}}
                                             />
                                         }
                                         label="Transport2"
@@ -389,6 +391,7 @@ const AppFrame = props => (
                                                 //onChange={this.handleChange('checkedB')}
                                                 value="Transport3"
                                                 color="primary"
+                                                style={{width: "33%", marginLeft:"80%"}}
                                             />
                                         }
                                         label="Transport3"
@@ -403,7 +406,7 @@ const AppFrame = props => (
                                     </Button>
                                     {/* SAVE THE INFORMATION */}
                                     <Button variant="raised" component="span" style=
-                                    {{marginTop:"15px",marginLeft:"25px", marginBottom:"100px", width:"45%",
+                                    {{marginTop:"15px",marginLeft:"5px", marginBottom:"100px", width:"45%",
                                      borderColor: '#rgba(239, 156, 102, 1)',
                                     color: "rgba(239, 156, 102, 1)"}}>
                                         Save the information ›
