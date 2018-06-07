@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {withStyles} from 'material-ui/styles';
-import {Tab, Tabs} from 'material-ui';
+import {withStyles} from '@material-ui/core/styles';
+import {Tab, Tabs} from '@material-ui/core';
 
 const styles = theme => ({
     root: {

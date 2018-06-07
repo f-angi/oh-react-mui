@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {withStyles} from 'material-ui/styles';
-import {Divider, Grid, Typography} from 'material-ui';
+import {withStyles} from '@material-ui/core/styles';
+import {Divider, Grid, Typography} from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 
 const styles = theme => ({});

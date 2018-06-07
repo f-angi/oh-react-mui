@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {withStyles} from 'material-ui/styles';
-import {Badge, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText} from 'material-ui';
+import {withStyles} from '@material-ui/core/styles';
+import {Badge, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText} from '@material-ui/core';
 import DrawerSearch from './DrawerSearch';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ChatIcon from '@material-ui/icons/Chat';

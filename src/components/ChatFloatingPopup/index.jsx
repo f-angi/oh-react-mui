@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { withStyles } from 'material-ui/styles';
-import { Grid, IconButton, Paper, Typography } from 'material-ui';
+import { withStyles } from '@material-ui/core/styles';
+import { Grid, IconButton, Paper, Typography } from '@material-ui/core';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 
 const styles = theme => ({

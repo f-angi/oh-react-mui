@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-import {withStyles} from 'material-ui/styles';
+import {withStyles} from '@material-ui/core/styles';
 
 import Header from '../../components/Header';
 import WelcomeBar from '../../components/WelcomeBar';
@@ -11,7 +11,7 @@ import DashboardMaterials from '../../components/DashboardMaterials';
 import DashboardCalendar from '../../components/DashboardCalendar';
 import DashboardAppointments from '../../components/DashboardAppointments';
 import ChatFloatingPopup from '../../components/ChatFloatingPopup';
-import {Grid, Paper} from 'material-ui';
+import {Grid, Paper} from '@material-ui/core';
 
 const styles = theme => ({
     appFramePaper:

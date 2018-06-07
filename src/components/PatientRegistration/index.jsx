@@ -1,7 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-import {withStyles} from 'material-ui/styles';
+import {withStyles} from '@material-ui/core/styles';
 import Header from '../../components/Header';
 import WelcomeBar from '../../components/WelcomeBar';
 import ChatFloatingPopup from '../../components/ChatFloatingPopup';
@@ -15,7 +15,7 @@ import {
     Paper,
     Select,
     TextField
-} from 'material-ui';
+} from '@material-ui/core';
 import {InsertPhoto, PhotoCamera} from "@material-ui/icons/es/index";
 
 const styles = theme => ({

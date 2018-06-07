@@ -1,6 +1,6 @@
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
-import { Checkbox, Grid, Paper, Typography } from 'material-ui';
+import { withStyles } from '@material-ui/core/styles';
+import { Checkbox, Grid, Paper, Typography } from '@material-ui/core';
 
 const styles = theme => ({
   appointmentDone: theme.mixins.gutters({
