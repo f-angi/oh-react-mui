@@ -29,11 +29,6 @@ const styles = theme => ({
     button: {
         margin: theme.spacing.unit,
     },
-    buttonOrange: {
-        margin: theme.spacing.unit,
-        backgroundColor: "rgba(239, 156, 102, 1)",
-        color: "#FFFFFF"
-    },
     formControl: {
         margin: theme.spacing.unit,
         minWidth: 120,
@@ -200,14 +195,7 @@ const AppFrame = props => (
                                         fullWidth
                                     />
                                     <br/>
-                                    {/* SAVE AND START VISIT BUTTON */}
-                                    <Button variant="raised" component="span" className={styles.buttonOrange}>
-                                        Save and start a visit ›
-                                    </Button>
-                                    {/* SAVE THE INFORMATION */}
-                                    <Button variant="raised" component="span" className={styles.button}>
-                                        Save the information ›
-                                    </Button>
+                                   
                                 </Grid>
 
                                 {/* RIGHT SUBCOLOUMN */}
@@ -231,7 +219,7 @@ const AppFrame = props => (
                                     />
                                     <br/>
                                     {/* SEX SELECT */}
-                                    <FormControl required className={styles.formControl} style={{width: "50%"}}>
+                                    <FormControl required className={styles.formControl} style={{width: "50%", marginTop: "17px"}}>
                                         <InputLabel required htmlFor="sex-native-simple">Sex</InputLabel>
                                         <Select
                                             native
@@ -255,6 +243,7 @@ const AppFrame = props => (
                                         className={styles.textField}
                                         margin="normal"
                                         fullWidth
+                                        style= {{marginTop:"23px"}}
                                     />
                                     <br/>
                                     {/* ADDRESS */}
@@ -277,7 +266,8 @@ const AppFrame = props => (
                                         fullWidth
                                     />
                                     <br/>
-                                    <h3>Other optional information</h3>
+                                    <h3 style={{marginTop: "32px"}}>
+                                     Other optional information</h3>
                                     {/* RELATIONSHIP */}
                                     <TextField
                                         id="relationship"
@@ -401,6 +391,21 @@ const AppFrame = props => (
                                         }
                                         label="Transport3"
                                     />
+
+                                     {/* SAVE AND START VISIT BUTTON */}
+                                     <Button variant="raised" component="span" style=
+                                    {{marginTop:"15px",
+                                    backgroundColor: "rgba(239, 156, 102, 1)",
+                                    color: "#FFFFFF"}}>
+                                        Save and start a visit >
+                                    </Button>
+                                    {/* SAVE THE INFORMATION */}
+                                    <Button variant="raised" component="span" style=
+                                    {{marginTop:"15px",
+                                     borderColor: '#rgba(239, 156, 102, 1)',
+                                    color: "rgba(239, 156, 102, 1)"}}>
+                                        Save the information ›
+                                    </Button>
                                 </Grid>
                             </Grid>
                         </Grid>
