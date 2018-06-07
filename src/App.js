@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import {createMuiTheme, MuiThemeProvider} from 'material-ui';
+import {createMuiTheme, MuiThemeProvider} from '@material-ui/core';
 import theme from './theme';
 import MomentUtils from 'material-ui-pickers/utils/moment-utils';
 import Dashboard from './scenes/Dashboard/index';

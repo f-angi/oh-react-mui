@@ -3,8 +3,8 @@ import React from 'react';
 import DashboardSection from '../DashboardSection';
 import DashboardAppointment from './DashboardAppointment';
 import SelectTimeRange from '../../components/SelectTimeRange';
-import {withStyles} from 'material-ui/styles';
-import {Divider, Grid, Paper, Typography} from 'material-ui';
+import {withStyles} from '@material-ui/core/styles';
+import {Divider, Grid, Paper, Typography} from '@material-ui/core';
 
 const styles = theme => ({
     root: theme.mixins.gutters({

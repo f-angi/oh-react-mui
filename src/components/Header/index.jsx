@@ -1,16 +1,16 @@
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 
-import Grid from 'material-ui/Grid';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
+import Grid from '@material-ui/core/Grid';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 import HeaderLinks from './HeaderLinks';
 import HeaderLinksHamburger from './HeaderLinksHamburger';
 import HeaderNotificationArea from './HeaderNotificationArea';
 import ModeEditIcon from '@material-ui/icons/ModeEdit';
-import { Hidden, IconButton } from 'material-ui';
+import { Hidden, IconButton } from '@material-ui/core';
 
 const styles = theme => ({
   header: {

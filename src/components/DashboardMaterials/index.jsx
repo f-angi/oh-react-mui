@@ -1,9 +1,9 @@
 import React from 'react';
 
-import {withStyles} from 'material-ui/styles';
+import {withStyles} from '@material-ui/core/styles';
 import DashboardSection from '../DashboardSection';
 import DashboardMaterial from './DashboardMaterial';
-import {AppBar, Button, Grid, Tab, Tabs} from 'material-ui';
+import {AppBar, Button, Grid, Tab, Tabs} from '@material-ui/core';
 
 const styles = theme => ({
     root: theme.mixins.gutters({

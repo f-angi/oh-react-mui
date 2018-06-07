@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SearchIcon from '@material-ui/icons/Search';
-import { withStyles } from 'material-ui/styles';
-import { FormControl } from 'material-ui/Form/index';
-import { Grid, IconButton, Input, Slide } from 'material-ui';
+import { withStyles } from '@material-ui/core/styles';
+import { FormControl } from '@material-ui/core/es/index';
+import { Grid, IconButton, Input, Slide } from '@material-ui/core';
 
 const styles = {
   form: {

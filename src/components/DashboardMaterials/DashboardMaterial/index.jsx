@@ -1,8 +1,8 @@
 import React from 'react';
 
 import WarningIcon from '@material-ui/icons/Warning';
-import { withStyles } from 'material-ui/styles';
-import { Button, Card, CardActions, CardContent, Divider, Grid, Typography } from 'material-ui';
+import { withStyles } from '@material-ui/core/styles';
+import { Button, Card, CardActions, CardContent, Divider, Grid, Typography } from '@material-ui/core';
 
 
 const styles = theme => ({});

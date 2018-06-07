@@ -3,8 +3,8 @@ import React from 'react';
 // import {Switch} from "react-router-dom";
 
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import {withStyles} from 'material-ui/styles';
-import {Button, Grid} from 'material-ui';
+import {withStyles} from '@material-ui/core/styles';
+import {Button, Grid} from '@material-ui/core';
 import DashboardSection from '../DashboardSection';
 
 const styles = (theme) => {
