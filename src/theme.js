@@ -15,22 +15,22 @@ const Theme = {
   },
 };
 
-// const Theme = {
-//   palette: {
-//     primary: {
-//       light: '#ff9860',
-//       main: '#ff6633',
-//       dark: '#c53301',
-//       contrastText: '#ffffff',
-//     },
-//     secondary: {
-//       light: '#6cdebe',
-//       main: '#34ac8e',
-//       dark: '#007c61',
-//       contrastText: '#ffffff',
-//     },
-//   },
-// };
+/*const Theme = {
+  palette: {
+    primary: {
+      light: '#ff9860',
+      main: '#ff6633',
+      dark: '#c53301',
+      contrastText: '#ffffff',
+    },
+    secondary: {
+      light: '#6cdebe',
+      main: '#34ac8e',
+      dark: '#007c61',
+      contrastText: '#ffffff',
+    },
+  },
+};*/
 
 
 // const Theme = {
