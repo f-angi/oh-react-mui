@@ -107,7 +107,8 @@ class AppFrame extends React.Component {
                                                 type="file"
                                             />
                                             <label htmlFor="raised-button-file">
-                                                <Button style={{width: "45%"}} variant="raised" component="span" className={styles.button}>
+                                                <Button style={{width: "45%"}} variant="raised" component="span"
+                                                        className={styles.button}>
                                                     Take a photo of the patient
                                                     <IconButton color="primary" className={styles.button}
                                                                 component="span">
@@ -117,7 +118,8 @@ class AppFrame extends React.Component {
                                             </label>
 
                                             {/* GALLERY */}
-                                            <Button style={{width: "45%", marginLeft: "15px "}} variant="raised" component="span" className={styles.button}>
+                                            <Button style={{width: "45%", marginLeft: "15px "}} variant="raised"
+                                                    component="span" className={styles.button}>
                                                 Go to gallery
                                                 <IconButton color="primary" className={styles.button}
                                                             component="span">
