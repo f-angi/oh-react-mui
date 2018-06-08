@@ -388,6 +388,7 @@ class AppFrame extends React.Component {
 
                                             {/*BLOCK THREE ELEMENT TRANSPORT */}
                                             <FormControlLabel
+                                                style={{marginLeft:"-10px"}}
                                                 className={classes.textFieldThree}
                                                 control={
                                                     <Checkbox
