@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { withStyles } from 'material-ui/styles';
-import {Badge, Grid, IconButton} from 'material-ui';
+import { withStyles } from '@material-ui/core/styles';
+import {Badge, Grid, IconButton} from '@material-ui/core';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ChatIcon from '@material-ui/icons/Chat';
 import EventNoteIcon from '@material-ui/icons/EventNote';
@@ -27,10 +27,10 @@ const HeaderNotificationArea = props => (
       <IconButton><Badge color="primary" badgeContent={8}><ChatIcon /></Badge></IconButton>
     </Grid>
     <Grid item>
-      <IconButton><Badge><EventNoteIcon /></Badge></IconButton>
+      <IconButton><Badge color="primary" badgeContent={8}><EventNoteIcon /></Badge></IconButton>
     </Grid>
     <Grid item>
-      <IconButton><Badge><SettingsIcon /></Badge></IconButton>
+      <IconButton><Badge color="primary" badgeContent={8}><SettingsIcon /></Badge></IconButton>
     </Grid>
   </Grid>
 );

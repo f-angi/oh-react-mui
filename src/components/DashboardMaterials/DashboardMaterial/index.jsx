@@ -1,8 +1,8 @@
 import React from 'react';
 
 import WarningIcon from '@material-ui/icons/Warning';
-import { withStyles } from 'material-ui/styles';
-import { Button, Card, CardActions, CardContent, Divider, Grid, Typography } from 'material-ui';
+import { withStyles } from '@material-ui/core/styles';
+import { Button, Card, CardActions, CardContent, Divider, Grid, Typography } from '@material-ui/core';
 
 
 const styles = theme => ({});
@@ -12,7 +12,7 @@ const DashboardMaterial = (props) => {
   return (
     <Card elevation={0}>
       <CardContent>
-        <Grid container spacing={12}>
+        <Grid container spacing={8}>
           <Grid item>
             <WarningIcon color="primary" />
           </Grid>

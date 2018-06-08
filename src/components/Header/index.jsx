@@ -1,16 +1,16 @@
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 
-import Grid from 'material-ui/Grid';
-import AppBar from 'material-ui/AppBar';
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
+import Grid from '@material-ui/core/Grid';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 import HeaderLinks from './HeaderLinks';
 import HeaderLinksHamburger from './HeaderLinksHamburger';
 import HeaderNotificationArea from './HeaderNotificationArea';
 import ModeEditIcon from '@material-ui/icons/ModeEdit';
-import { Hidden, IconButton } from 'material-ui';
+import { Hidden, IconButton } from '@material-ui/core';
 
 const styles = theme => ({
   header: {
@@ -60,7 +60,7 @@ const Header = (props) => {
                           <Grid item>
                             <Grid container alignItems="flex-end">
                               <Grid item>
-                                <Typography variant="body1">{props.hospitalName}&nbsp;</Typography>
+                                <Typography variant="body1">{hospitalName}&nbsp;</Typography>
                               </Grid>
                               <Grid item>
                                 <IconButton style={editModeButtonStyle}>
@@ -70,8 +70,7 @@ const Header = (props) => {
                             </Grid>
                           </Grid>
                           <Grid item>
-                            <Typography variant="subheading">Welcome
-                                                        back, <strong>{props.username}</strong>
+                            <Typography variant="subheading">Welcome back, <strong>{username}</strong>
                             </Typography>
                           </Grid>
                         </Grid>
