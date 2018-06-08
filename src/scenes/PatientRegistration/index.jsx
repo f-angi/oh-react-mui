@@ -74,7 +74,7 @@ const styles = theme => ({
 // Array per select gruppo sanguigno
 const bloodGroup = ["", "0+", "0-", "A+", "A-", "B+", "B-", "C+", "C-", "AB+", "AB-"];
 
-class AppFrame extends React.Component {
+class PatientRegistration extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -85,18 +85,18 @@ class AppFrame extends React.Component {
   }
 
   handleChangeTransport = name => event => {
-    this.setState({[name]: event.target.checked});
+    this.setState({ [name]: event.target.checked });
   };
 
   render() {
-    const {classes} = this.props;
+    const { classes } = this.props;
     return (
       <div>
         <Grid container justify="center" alignItems="stretch">
           <Grid item xs={12} lg={10}>
-            <Header username={this.props.username} hospitalName={this.props.hospitalName}/>
+            <Header username={this.props.username} hospitalName={this.props.hospitalName} />
             <Paper elevation={4} className={classes.appFramePaper}>
-              <WelcomeBar path={"Home / Patient Registration"} txt={""}/>
+              <WelcomeBar path={"Home / Patient Database / Patient Registration"} txt={""} />
               <Grid container spacing={24} className={classes.containerWhite}>
                 <Grid item xs={6} md={2}>
                   <h4>NEW PATIENT REGISTRATION</h4>
@@ -116,7 +116,7 @@ class AppFrame extends React.Component {
                       <input
                         accept="image/*"
                         className={classes.input}
-                        style={{display: "none"}}
+                        style={{ display: "none" }}
                         id="raised-button-file"
                         type="file"
                       />
@@ -126,7 +126,7 @@ class AppFrame extends React.Component {
                           Take a photo of the patient
                           <IconButton color="primary" className={classes.button}
                                       component="span">
-                            <PhotoCamera/>
+                            <PhotoCamera />
                           </IconButton>
                         </Button>
                       </label>
@@ -137,10 +137,10 @@ class AppFrame extends React.Component {
                         Go to gallery
                         <IconButton color="primary" className={classes.button}
                                     component="span">
-                          <InsertPhoto/>
+                          <InsertPhoto />
                         </IconButton>
                       </Button>
-                      <br/>
+                      <br />
                       {/* FIRST NAME */}
                       <TextField
                         required
@@ -150,7 +150,7 @@ class AppFrame extends React.Component {
                         margin="normal"
                         color={"primary"}
                       />
-                      <br/>
+                      <br />
                       {/* AGE */}
                       <TextField
                         required
@@ -204,7 +204,7 @@ class AppFrame extends React.Component {
                         }}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* TAX NUMBER */}
                       <TextField
                         required
@@ -213,7 +213,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* CITY */}
                       <TextField
                         required
@@ -222,7 +222,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* CONTACT */}
                       <TextField
                         required
@@ -231,7 +231,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* NEXT OF KIN */}
                       <TextField
                         required
@@ -240,7 +240,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
 
                     </Grid>
 
@@ -261,12 +261,12 @@ class AppFrame extends React.Component {
                             id: 'sex-native-simple',
                           }}
                         >
-                          <option value=""/>
+                          <option value="" />
                           <option value={"M"}>M</option>
                           <option value={"F"}>F</option>
                         </Select>
                       </FormControl>
-                      <br/>
+                      <br />
                       {/* OTHER NAME */}
                       <TextField
                         required
@@ -275,7 +275,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* OTHER NUMBER */}
                       <TextField
                         required
@@ -284,7 +284,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* ADDRESS */}
                       <TextField
                         required
@@ -293,7 +293,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* NEXT OF KIN CONTACT */}
                       <TextField
                         required
@@ -302,10 +302,10 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
 
                       {/* OPTIONAL FIELDS */}
-                      <h3 style={{marginTop: "30px"}} className={classes.titles}>
+                      <h3 style={{ marginTop: "30px" }} className={classes.titles}>
                         Other optional information</h3>
                       {/* RELATIONSHIP */}
                       <TextField
@@ -314,7 +314,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* INSURANCE */}
                       <TextField
                         id="insurance"
@@ -333,11 +333,11 @@ class AppFrame extends React.Component {
                           }}
                         >
                           {bloodGroup.map((val, index) =>
-                            <option value={val} key={index}>{`${val}`}</option>
+                            <option value={val} key={index}>{val}</option>
                           )}
                         </Select>
                       </FormControl>
-                      <br/>
+                      <br />
                       {/* EDUCATIONAL LEVEL */}
                       <TextField
                         id="educational-level"
@@ -345,10 +345,10 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
 
                       {/* DISTANCE FROM THE HOSPITAL BLOCK THREE INPUT */}
-                      <h5 style={{marginTop: "25px"}} className={classes.titles}>
+                      <h5 style={{ marginTop: "25px" }} className={classes.titles}>
                         Distance of the house from the Hospital
                       </h5>
                       <TextField
@@ -384,11 +384,11 @@ class AppFrame extends React.Component {
                         }}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
 
                       {/*BLOCK THREE ELEMENT TRANSPORT */}
                       <FormControlLabel
-                        style={{marginLeft: "-10px"}}
+                        style={{ marginLeft: "-10px" }}
                         className={classes.textFieldThree}
                         control={
                           <Checkbox
@@ -426,7 +426,7 @@ class AppFrame extends React.Component {
                         }
                         label="Transport3"
                       />
-                      <br/>
+                      <br />
                       {/* SAVE AND START VISIT BUTTON */}
                       <Button variant="raised" component="span"
                               className={classes.buttonInlineDuo}
@@ -454,21 +454,14 @@ class AppFrame extends React.Component {
             </Paper>
           </Grid>
         </Grid>
-        <ChatFloatingPopup/>
+        <ChatFloatingPopup />
       </div>
     )
   }
 }
 
-// AppFrame.defaultProps = {
-//   classes: {},
-//   title: 'HelpDesk',
-//   breadcrumbs: [],
-//   children: null,
-// };
-
-AppFrame.propTypes = {
+PatientRegistration.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(AppFrame);
+export default withStyles(styles)(PatientRegistration);
