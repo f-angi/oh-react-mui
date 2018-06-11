@@ -6,15 +6,16 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import ModeEditIcon from '@material-ui/icons/ModeEdit';
-import { Hidden, IconButton } from '@material-ui/core';
 import {
-  Button,
+  Hidden,
+  IconButton,
   Dialog,
-  DialogActions,
-  DialogContent,
   DialogTitle,
-  TextField
-} from "@material-ui/core/es/index";
+  DialogContent,
+  TextField,
+  DialogActions,
+  Button
+} from '@material-ui/core';
 
 import HeaderLinks from './HeaderLinks';
 import HeaderLinksHamburger from './HeaderLinksHamburger';

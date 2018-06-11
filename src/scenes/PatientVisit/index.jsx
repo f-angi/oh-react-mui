@@ -20,7 +20,7 @@ import {
   ListItemText,
   MenuItem,
   Input,
-} from "@material-ui/core/es/index";
+} from "@material-ui/core";
 import Header from '../../components/Header/index';
 import WelcomeBar from '../../components/WelcomeBar/index';
 import ChatFloatingPopup from '../../components/ChatFloatingPopup/index';

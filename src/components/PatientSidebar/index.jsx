@@ -2,8 +2,8 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles/index';
 
-import { Person, Phone } from '@material-ui/icons/es/index';
-import { Avatar, Divider, FormControlLabel, Switch } from '@material-ui/core/es/index';
+import { Person, Phone } from '@material-ui/icons';
+import { Avatar, Divider, FormControlLabel, Switch } from '@material-ui/core';
 
 const styles = theme => ({
   containerWhite: {

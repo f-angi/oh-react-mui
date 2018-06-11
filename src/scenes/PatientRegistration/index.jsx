@@ -16,7 +16,7 @@ import {
   Select,
   TextField
 } from '@material-ui/core';
-import { InsertPhoto, PhotoCamera } from "@material-ui/icons/es/index";
+import { InsertPhoto, PhotoCamera } from "@material-ui/icons";
 
 const styles = theme => ({
   appFramePaper:
