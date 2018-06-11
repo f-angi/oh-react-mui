@@ -24,6 +24,7 @@ import {
 import Header from '../../components/Header/index';
 import WelcomeBar from '../../components/WelcomeBar/index';
 import ChatFloatingPopup from '../../components/ChatFloatingPopup/index';
+import PatientSidebar from '../../components/PatientSidebar/index';
 
 const styles = theme => ({
   appFramePaper:
@@ -38,7 +39,11 @@ const styles = theme => ({
   },
   buttonInlineDuo: {
     margin: theme.spacing.unit,
-    width: '44%',
+    minWidth: '44%',
+  },
+  buttonInlineLarge: {
+    margin: theme.spacing.unit,
+    minWidth: '50%',
   },
   formControl: {
     margin: theme.spacing.unit,
@@ -60,28 +65,18 @@ const styles = theme => ({
   titles: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-  }
+  },
 });
 
 // Select per laboratory tests
 const laboratoryTests = ['List Item 1', 'List Item 2', 'List Item 3', 'List Item 4', 'List Item 5'];
-
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
 
 class PatientVisit extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       checkedNO: true,
+      checkedCronic: true,
       name: []
     };
     this.handleChange = this.handleChange.bind(this);
@@ -99,6 +94,17 @@ class PatientVisit extends React.Component {
 
   render() {
     const { classes } = this.props;
+    const ITEM_HEIGHT = 48;
+    const ITEM_PADDING_TOP = 8;
+    const MenuProps = {
+      PaperProps: {
+        style: {
+          maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+          width: 250,
+        },
+      },
+    };
+
     return (
       <div>
         <Grid container justify='center' alignItems='stretch'>
@@ -107,9 +113,19 @@ class PatientVisit extends React.Component {
             <Paper elevation={4} className={classes.appFramePaper}>
               <WelcomeBar path="Home / Patient Database / Patient details / Patient visit" txt="" />
               <Grid container spacing={24} className={classes.containerWhite}>
-                <Grid item xs={6} md={2}>
-                  <h4>SIDEBAR</h4>
-                  {/* TODO */}
+
+                {/* LEFT SUBCOLOUM */}
+                <Grid item xs={6} md={2} className={"mobile-view-large"}
+                      style={{ backgroundColor: "rgba(94, 94, 94, 1)" }}>
+                  <PatientSidebar
+                    patientID={'32040'} OPD={'8937821'} bloodGroup={'A+'}
+                    patientName={this.props.patientName} patientAvatarSrc={null}
+                    notes={['Pneumonia and malnutrition', 'Grasses, Gluten']}
+                    cronic={this.state.checkedCronic} cronicOnChange={this.handleChange}
+                    lastAdmission={'22.01.2016'} reason={'Pneumonia and malnutrition'}
+                    treatment={'Pneumond malnutrition'} doctorAvatarSrc={null}
+                    doctorName={'Dr. Meredith Greys'} doctorJob={'Pneumologis'} doctorPhone={'3453829043'}
+                  />
                 </Grid>
 
                 {/* RIGHT SUBCOLOUM */}
@@ -135,7 +151,7 @@ class PatientVisit extends React.Component {
                   <Button
                     variant="raised"
                     component="span"
-                    className={classes.buttonInlineDuo}
+                    className={classes.buttonInlineLarge}
                   >
                     BROWSE THE ICD 10
                   </Button>

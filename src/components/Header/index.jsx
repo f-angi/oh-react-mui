@@ -51,7 +51,6 @@ class Header extends React.Component {
       open: false,
     };
     this.handleClick = this.handleClick.bind(this);
-    //this.handleClose = this.handleClose.bind(this);
     this.handleCloseSave = this.handleCloseSave.bind(this);
   }
 
@@ -66,6 +65,7 @@ class Header extends React.Component {
 
   render() {
     const { username, hospitalName, classes } = this.props;
+    const menu = ['Dashboard', 'Patient database', 'Colleagues database', 'Pharmacy', 'Ward', 'Billing', 'News'];
     const editModeIconStyle = { fontSize: 15 };
     const editModeButtonStyle = { height: 22, width: 22 };
 
@@ -134,7 +134,8 @@ class Header extends React.Component {
                     <Hidden mdUp>
                       <Grid item>
                         <HeaderLinksHamburger
-                          links={['Dashboard', 'Patient database', 'Colleagues database', 'Pharmacy', 'Ward', 'Billing', 'News']} />
+                          links={menu}
+                        />
                       </Grid>
                     </Hidden>
                   </Grid>
@@ -149,7 +150,7 @@ class Header extends React.Component {
             <Hidden smDown>
               <Grid item md={12}>
                 <HeaderLinks
-                  links={['Dashboard', 'Patient database', 'Colleagues database', 'Pharmacy', 'Ward', 'Billing', 'News']}
+                  links={menu}
                 />
               </Grid>
             </Hidden>
@@ -161,4 +162,3 @@ class Header extends React.Component {
 }
 
 export default withStyles(styles)(Header);
-
