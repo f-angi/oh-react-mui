@@ -11,18 +11,19 @@ import {
   Paper,
   Select,
   TextField,
+  MenuItem,
   Divider,
   ExpansionPanel,
   ExpansionPanelDetails,
   FormGroup,
   ListItemText,
-  MenuItem,
   Input,
 } from "@material-ui/core";
 import Header from '../../components/Header/index';
 import WelcomeBar from '../../components/WelcomeBar/index';
 import ChatFloatingPopup from '../../components/ChatFloatingPopup/index';
 import PatientSidebar from '../../components/PatientSidebar/index';
+import AutocompleteField from '../../components/AutocompleteField/index';
 
 const styles = theme => ({
   appFramePaper:
@@ -35,13 +36,22 @@ const styles = theme => ({
   button: {
     margin: theme.spacing.unit,
   },
-  buttonInlineDuo: {
-    margin: theme.spacing.unit,
-    minWidth: '44%',
-  },
   buttonInlineLarge: {
     margin: theme.spacing.unit,
     minWidth: '50%',
+  },
+  buttonFull: {
+    margin: theme.spacing.unit,
+    width: '90%',
+    marginTop: 15,
+  },
+  backgroundOrange: {
+    backgroundColor: "rgba(239, 156, 102, 1)",
+    color: "#FFFFFF",
+  },
+  borderOrange: {
+    borderColor: '#rgba(239, 156, 102, 1)',
+    color: "rgba(239, 156, 102, 1)",
   },
   formControl: {
     margin: theme.spacing.unit,
@@ -66,13 +76,13 @@ const styles = theme => ({
   },
 });
 
-class PatientVisit extends React.Component {
+class PatientAdmission extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       checkedNO: true,
       checkedCronic: true,
-      name: []
+      name: [],
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleChangeSelect = this.handleChangeSelect.bind(this);
@@ -99,8 +109,14 @@ class PatientVisit extends React.Component {
         },
       },
     };
-    // Select per laboratory tests
+    // Elementi per select laboratory tests
     const laboratoryTests = ['List Item 1', 'List Item 2', 'List Item 3', 'List Item 4', 'List Item 5'];
+    // Array per autocomplete da passare come props
+    const suggestions = [
+      { label: 'Item 1' },
+      { label: 'Item 2' },
+      { label: 'Item 3' },
+    ];
 
     return (
       <div>
@@ -108,7 +124,7 @@ class PatientVisit extends React.Component {
           <Grid item xs={12} lg={10}>
             <Header username={this.props.username} hospitalName={this.props.hospitalName} />
             <Paper elevation={4} className={classes.appFramePaper}>
-              <WelcomeBar path="Home / Patient Database / Patient details / Patient visit" txt="" />
+              <WelcomeBar path="Home / Patient Database / Patient details / Patient admission" txt="" />
               <Grid container spacing={24} className={classes.containerWhite}>
 
                 {/* LEFT SUBCOLOUM */}
@@ -134,33 +150,57 @@ class PatientVisit extends React.Component {
                     <br />
                     <h3>COMPLETE THE FORM</h3>
                   </div>
-                  {/* REASON OF VISIT */}
-                  <TextField
-                    required
-                    multiline
-                    id="reason-of-visit"
-                    label="Reason of visit"
-                    rows="4"
-                    className={classes.textField}
-                    margin="normal"
-                  />
-                  {/* BROWSE ICD BUTTON */}
-                  <Button
-                    variant="raised"
-                    component="span"
-                    className={classes.buttonInlineLarge}
-                  >
-                    BROWSE THE ICD 10
-                  </Button>
-                  {/* DIAGNOSIS */}
-                  <TextField
-                    required
-                    multiline
-                    id="textarea"
-                    label="Diagnosis"
-                    className={classes.textField}
-                    margin="normal"
-                  />
+
+                  <Grid container spacing={16}>
+                    {/* LEFT SUB-SUBCOLOUMN */}
+                    <Grid item xs={12} sm={6}>
+                      <div className={classes.button}>
+                        <label htmlFor={"incoming-diagnosis"}>Incoming diagnosis</label>
+                        <AutocompleteField
+                          id="incoming-diagnosis"
+                          placeholder="Start typing..."
+                          suggestionsList={suggestions}
+                          //onChange={this.onChange}
+                        />
+                        <label htmlFor={"type-admission"}>Type of admission</label>
+                        <AutocompleteField
+                          id="type-admission"
+                          placeholder="Start typing..."
+                          suggestionsList={suggestions}
+                          //onChange={this.onChange}
+                        />
+                      </div>
+                    </Grid>
+
+                    {/* RIGHT SUB-SUBCOLOUMN */}
+                    <Grid item xs={12} sm={6}>
+                      {/* ADMISSION DATE */}
+                      <TextField
+                        required
+                        id="admission-date"
+                        label="Admission date"
+                        placeholder={"yyyy/mm/dd"}
+                        //onChange={this.handleChange('age')}
+                        type="date"
+                        className={classes.textField}
+                        InputLabelProps={{
+                          shrink: true
+                        }}
+                        margin="normal"
+                        style={{ marginTop: 27 }}
+                      />
+                      {/* BROWSE ICD BUTTON */}
+                      <Button
+                        variant="raised"
+                        component="span"
+                        className={classes.buttonInlineLarge}
+                        style={{ marginTop: 45, marginBottom: 80 }}
+                      >
+                        BROWSE THE ICD 10
+                      </Button>
+                    </Grid>
+                  </Grid>
+
                   {/* THERAPY BUTTON */}
                   <Button
                     variant="raised"
@@ -191,7 +231,7 @@ class PatientVisit extends React.Component {
                   />
 
                   {/* PRESCRIVE TEST */}
-                  <FormGroup className={classes.titles} row>
+                  <FormGroup row className={classes.titles}>
                     <p className={classes.marginRight}>Prescribe laboratory test/s</p>
                     <FormControlLabel
                       control={
@@ -209,7 +249,7 @@ class PatientVisit extends React.Component {
                         <Checkbox
                           checked={this.state.checkedNO}
                           onChange={this.handleChange('checkedNO')}
-                          value="checkedNo"
+                          value="checkedNO"
                           color="primary"
                         />
                       }
@@ -240,26 +280,35 @@ class PatientVisit extends React.Component {
                     </ExpansionPanelDetails>
                   </ExpansionPanel>
 
-                  {/* SAVE AND START VISIT BUTTON */}
-                  <Button variant="raised" component="span"
-                          className={classes.buttonInlineDuo}
-                          style={{
-                            marginTop: "15px",
-                            backgroundColor: "rgba(239, 156, 102, 1)",
-                            color: "#FFFFFF",
-                          }}>
-                    Save and prescribe exam
-                  </Button>
-                  {/* SAVE THE INFORMATION */}
-                  <Button variant="raised" component="span"
-                          className={classes.buttonInlineDuo}
-                          style={{
-                            marginTop: "15px",
-                            borderColor: '#rgba(239, 156, 102, 1)',
-                            color: "rgba(239, 156, 102, 1)"
-                          }}>
-                    Print the visit
-                  </Button>
+                  <Grid container>
+                    <Grid item xs={12} sm={6}>
+                      {/* SAVE THE ADMISSION */}
+                      <Button variant="raised" component="span"
+                              className={`${classes.buttonFull} ${classes.backgroundOrange}`}
+                        /* STYLE HARDCODED altrimenti l'hover del mouse colora di grigio il bottone */
+                              style={{
+                                backgroundColor: "rgba(239, 156, 102, 1)",
+                                color: "#FFFFFF",
+                              }}
+                      >
+                        Save the admission
+                      </Button>
+                      {/* PRINT THE ADMISSION */}
+                      <Button variant="raised" component="span"
+                              className={`${classes.buttonFull} ${classes.borderOrange}`}
+                      >
+                        Print the admission
+                      </Button>
+                    </Grid>
+                    <Grid item xs={12} sm={6}>
+                      {/* PAY THE BILL */}
+                      <Button variant="raised" component="span"
+                              className={`${classes.buttonFull} ${classes.borderOrange}`}
+                      >
+                        $ Pay the bill
+                      </Button>
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
             </Paper>
@@ -271,17 +320,17 @@ class PatientVisit extends React.Component {
   }
 }
 
-PatientVisit.defaultProps = {
+PatientAdmission.defaultProps = {
   patientName: 'Modotoky Tokaiia',
   provenance: 'District, Village',
   hospitalName: 'Hospital St. Democrito',
 };
 
-PatientVisit.propTypes = {
+PatientAdmission.propTypes = {
   classes: PropTypes.object.isRequired,
   patientName: PropTypes.string.isRequired,
   provenance: PropTypes.string.isRequired,
   hospitalName: PropTypes.string.isRequired,
 };
 
-export default withStyles(styles)(PatientVisit);
+export default withStyles(styles)(PatientAdmission);

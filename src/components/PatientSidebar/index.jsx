@@ -94,7 +94,7 @@ const PatientSidebar = (props) => {
             <Switch
               className={classes.Switch}
               checked={props.cronic}
-              onChange={props.cronicOnChange('checkedCronic')}
+              // onChange={props.cronicOnChange('checkedCronic')}
               value="checkedCronic"
               disabled
             />
