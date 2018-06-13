@@ -94,7 +94,7 @@ class PatientRegistration extends React.Component {
       <div>
         <Grid container justify="center" alignItems="stretch">
           <Grid item xs={12} lg={10}>
-            <Header username={this.props.username} hospitalName={this.props.hospitalName} />
+            <Header username={this.props.username} hospitalName={this.props.hospitalName} value={1} />
             <Paper elevation={4} className={classes.appFramePaper}>
               <WelcomeBar path={"Home / Patient Database / Patient Registration"} txt={""} />
               <Grid container spacing={24} className={classes.containerWhite}>

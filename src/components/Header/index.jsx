@@ -152,6 +152,7 @@ class Header extends React.Component {
               <Grid item md={12}>
                 <HeaderLinks
                   links={menu}
+                  value={this.props.value}
                 />
               </Grid>
             </Hidden>

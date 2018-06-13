@@ -12,7 +12,6 @@ import {
   Select,
   TextField,
   MenuItem,
-  Divider,
   ExpansionPanel,
   ExpansionPanelDetails,
   FormGroup,
@@ -24,6 +23,7 @@ import WelcomeBar from '../../components/WelcomeBar/index';
 import ChatFloatingPopup from '../../components/ChatFloatingPopup/index';
 import PatientSidebar from '../../components/PatientSidebar/index';
 import AutocompleteField from '../../components/AutocompleteField/index';
+import PatientRightMainBar from '../../components/PatientRightMainBar/index';
 
 const styles = theme => ({
   appFramePaper:
@@ -122,7 +122,7 @@ class PatientAdmission extends React.Component {
       <div>
         <Grid container justify='center' alignItems='stretch'>
           <Grid item xs={12} lg={10}>
-            <Header username={this.props.username} hospitalName={this.props.hospitalName} />
+            <Header username={this.props.username} hospitalName={this.props.hospitalName} value={1} />
             <Paper elevation={4} className={classes.appFramePaper}>
               <WelcomeBar path="Home / Patient Database / Patient details / Patient admission" txt="" />
               <Grid container spacing={24} className={classes.containerWhite}>
@@ -131,7 +131,7 @@ class PatientAdmission extends React.Component {
                 <Grid item xs={6} md={2} className={"mobile-view-large"}
                       style={{ backgroundColor: "rgba(94, 94, 94, 1)" }}>
                   <PatientSidebar
-                    patientID={'32040'} OPD={'8937821'} bloodGroup={'A+'}
+                    patientID={'32040'} OPD={'8937821'} bloodGroup={'A+'} isMan={true}
                     patientName={this.props.patientName} patientAvatarSrc={null}
                     notes={['Pneumonia and malnutrition', 'Grasses, Gluten']}
                     cronic={this.state.checkedCronic} //cronicOnChange={this.handleChange}
@@ -143,13 +143,11 @@ class PatientAdmission extends React.Component {
 
                 {/* RIGHT SUBCOLOUM */}
                 <Grid item xs={12} md={10}>
-                  <div className={classes.titles}>
-                    <h1>{this.props.patientName}</h1>
-                    <p>Provenance: <b>{this.props.provenance}</b></p>
-                    <Divider />
-                    <br />
-                    <h3>COMPLETE THE FORM</h3>
-                  </div>
+                  <PatientRightMainBar
+                    patientName={this.props.patientName}
+                    provenance={this.props.provenance}
+                    mainTitle={"COMPLETE THE FORM"}
+                  />
 
                   <Grid container spacing={16}>
                     {/* LEFT SUB-SUBCOLOUMN */}

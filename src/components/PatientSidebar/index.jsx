@@ -2,8 +2,10 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles/index';
 
-import { Person, Phone } from '@material-ui/icons';
+import { Phone } from '@material-ui/icons';
 import { Avatar, Divider, FormControlLabel, Switch } from '@material-ui/core';
+import manLogo from '../../man.png';
+import womanLogo from '../../woman.png';
 
 const styles = theme => ({
   containerWhite: {
@@ -65,7 +67,7 @@ const PatientSidebar = (props) => {
     <div id="resize">
       <div id="resizeTop">
         <div id="icon">
-          <Person style={{ color: 'white', marginLeft: '75%' }} />
+          <img src={props.isMan ? manLogo : womanLogo} style={{ color: 'white', marginLeft: '80%' }} alt={props.isMan ? 'man' : 'woman'} />
         </div>
         <div id="resizeAvatar1">
           <Avatar
@@ -145,6 +147,7 @@ const PatientSidebar = (props) => {
 //   doctorAvatarSrc: PropTypes.string,
 //   doctorJob: PropTypes.string,
 //   doctorPhone: PropTypes.string,
+//   isMan: PropTypes.bool.isRequired,
 // };
 
 export default withStyles(styles)(PatientSidebar);
