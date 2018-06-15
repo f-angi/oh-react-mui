@@ -17,7 +17,7 @@ import {
   FormGroup,
   ListItemText,
   Input,
-} from "@material-ui/core";
+} from '@material-ui/core';
 import Header from '../../components/Header/index';
 import WelcomeBar from '../../components/WelcomeBar/index';
 import ChatFloatingPopup from '../../components/ChatFloatingPopup/index';
@@ -46,12 +46,12 @@ const styles = theme => ({
     marginTop: 15,
   },
   backgroundOrange: {
-    backgroundColor: "rgba(239, 156, 102, 1)",
-    color: "#FFFFFF",
+    backgroundColor: 'rgba(239, 156, 102, 1)',
+    color: '#FFFFFF',
   },
   borderOrange: {
     borderColor: '#rgba(239, 156, 102, 1)',
-    color: "rgba(239, 156, 102, 1)",
+    color: 'rgba(239, 156, 102, 1)',
   },
   formControl: {
     margin: theme.spacing.unit,
@@ -128,8 +128,8 @@ class PatientAdmission extends React.Component {
               <Grid container spacing={24} className={classes.containerWhite}>
 
                 {/* LEFT SUBCOLOUM */}
-                <Grid item xs={6} md={2} className={"mobile-view-large"}
-                      style={{ backgroundColor: "rgba(94, 94, 94, 1)" }}>
+                <Grid item xs={6} md={2} className={'mobile-view-large'}
+                      style={{ backgroundColor: 'rgba(94, 94, 94, 1)' }}>
                   <PatientSidebar
                     patientID={'32040'} OPD={'8937821'} bloodGroup={'A+'} isMan={true}
                     patientName={this.props.patientName} patientAvatarSrc={null}
@@ -146,21 +146,21 @@ class PatientAdmission extends React.Component {
                   <PatientRightMainBar
                     patientName={this.props.patientName}
                     provenance={this.props.provenance}
-                    mainTitle={"COMPLETE THE FORM"}
+                    mainTitle={'COMPLETE THE FORM'}
                   />
 
                   <Grid container spacing={16}>
                     {/* LEFT SUB-SUBCOLOUMN */}
                     <Grid item xs={12} sm={6}>
                       <div className={classes.button}>
-                        <label htmlFor={"incoming-diagnosis"}>Incoming diagnosis</label>
+                        <label htmlFor={'incoming-diagnosis'}>Incoming diagnosis</label>
                         <AutocompleteField
                           id="incoming-diagnosis"
                           placeholder="Start typing..."
                           suggestionsList={suggestions}
                           //onChange={this.onChange}
                         />
-                        <label htmlFor={"type-admission"}>Type of admission</label>
+                        <label htmlFor={'type-admission'}>Type of admission</label>
                         <AutocompleteField
                           id="type-admission"
                           placeholder="Start typing..."
@@ -177,12 +177,12 @@ class PatientAdmission extends React.Component {
                         required
                         id="admission-date"
                         label="Admission date"
-                        placeholder={"yyyy/mm/dd"}
+                        placeholder={'yyyy/mm/dd'}
                         //onChange={this.handleChange('age')}
                         type="date"
                         className={classes.textField}
                         InputLabelProps={{
-                          shrink: true
+                          shrink: true,
                         }}
                         margin="normal"
                         style={{ marginTop: 27 }}
@@ -285,8 +285,8 @@ class PatientAdmission extends React.Component {
                               className={`${classes.buttonFull} ${classes.backgroundOrange}`}
                         /* STYLE HARDCODED altrimenti l'hover del mouse colora di grigio il bottone */
                               style={{
-                                backgroundColor: "rgba(239, 156, 102, 1)",
-                                color: "#FFFFFF",
+                                backgroundColor: 'rgba(239, 156, 102, 1)',
+                                color: '#FFFFFF',
                               }}
                       >
                         Save the admission

@@ -23,12 +23,10 @@ const styles = theme => ({
     }),
 });
 
-
 class Collague extends React.Component {
-  state = { expanded: false };
-
   constructor(props) {
     super(props);
+    this.state = { expanded: false };
     this.handleExpandClick = this.handleExpandClick.bind(this);
   }
 
@@ -37,70 +35,109 @@ class Collague extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    // const { classes } = this.props;
 
     return (
-      <Card raised onClick={this.handleExpandClick}
-            style={{ width: "300px", float: "left" }}>
-        <CardHeader align="center" subheader={this.props.sex}
-                    title={<Typography variant="title" color="textSecondary"
-                                       noWrap><strong>Dr. {this.props.doctorName}</strong></Typography>} />
-        <Lens style={{ width: "50%", height: "50%", marginLeft: "25%" }} />
+      <Card
+        raised
+        onClick={this.handleExpandClick}
+        style={{ width: '300px', float: 'left' }}
+      >
+        <CardHeader
+          align="center"
+          subheader={this.props.sex}
+          title={
+            <Typography
+              variant="title"
+              color="textSecondary"
+              noWrap><strong>Dr. {this.props.doctorName}</strong>
+            </Typography>}
+        />
+        <Lens style={{ width: '50%', height: '50%', marginLeft: '25%' }} />
         <CardContent align="center">
           <Typography gutterBottom color="inherit" noWrap>{this.props.doctorType}<b>{this.props.lastAddition}</b>
           </Typography>
-          <Typography color="inherit" variant="subheading" noWrap style={{ fontSize: "10px" }}><Phone
-            style={{ width: "10px", height: "10px" }} />
+          <Typography
+            color="inherit"
+            variant="subheading"
+            noWrap
+            style={{ fontSize: '10px' }}>
+            <Phone style={{ width: '10px', height: '10px' }} />
             {this.props.phoneNumber}
           </Typography>
-          <Typography color="inherit" variant="subheading" noWrap style={{ fontSize: "10px" }}><Email
-            style={{ width: "10px", height: "10px" }} /> {this.props.email}
+          <Typography
+            color="inherit"
+            variant="subheading"
+            noWrap
+            style={{ fontSize: '10px' }}>
+            <Email style={{ width: '10px', height: '10px' }} />
+            {this.props.email}
           </Typography>
         </CardContent>
-        <div align="center"><Divider style={{ width: "250px" }} /></div>
+        <div align="center">
+          <Divider style={{ width: '250px' }} />
+        </div>
         <Collapse in={this.state.expanded}>
           <CardContent align="center">
-            <Typography color="textSecondary" variant="aside">
+            <Typography color="textSecondary" variant="body1">
               <strong> LAST PATIENTS VISITED </strong>
             </Typography>
             <Grid container justify="center">
               <Grid container spacing={16}>
                 <Grid item>
-                  <Lens style={{ width: "50px", height: "50px", float: "left", marginLeft: "-20px" }} />
-                  <Typography color="textSecondary" variant="aside"
-                              style={{ float: "left", marginTop: "10px" }}>
+                  <Lens style={{ width: '50px', height: '50px', float: 'left', marginLeft: '-20px' }} />
+                  <Typography
+                    color="textSecondary"
+                    variant="body1"
+                    style={{ float: 'left', marginTop: '10px' }}
+                  >
                     <strong>{this.props.lastPatient1.name}</strong><br />{this.props.lastPatient1.surname}
                   </Typography>
-                  <Lens style={{ width: "50px", height: "50px", float: "left", marginLeft: "10px" }} />
-                  <Typography color="textSecondary" variant="aside"
-                              style={{ float: "left", marginTop: "10px" }}>
+                  <Lens style={{ width: '50px', height: '50px', float: 'left', marginLeft: '10px' }} />
+                  <Typography
+                    color="textSecondary"
+                    variant="body1"
+                    style={{ float: 'left', marginTop: '10px' }}
+                  >
                     <strong>{this.props.lastPatient2.name}</strong><br />{this.props.lastPatient2.surname}
                   </Typography>
                 </Grid>
                 <Grid item>
-                  <Lens
-                    style={{ width: "50px", height: "50px", float: "left", marginLeft: "-20px", marginTop: "-10px" }} />
-                  <Typography color="textSecondary" variant="aside"
-                              style={{ float: "left", marginTop: "10px", marginTop: "-5px" }}>
+                  <Lens style={{
+                    width: '50px',
+                    height: '50px',
+                    float: 'left',
+                    marginLeft: '-20px',
+                    marginTop: '-10px',
+                  }}
+                  />
+                  <Typography
+                    color="textSecondary"
+                    variant="body1"
+                    style={{ float: 'left', marginTop: '10px' }}
+                  >
                     <strong>{this.props.lastPatient3.name}</strong><br />{this.props.lastPatient3.surname}
                   </Typography>
-                  <Lens
-                    style={{ width: "50px", height: "50px", float: "left", marginLeft: "10px", marginTop: "-10px" }} />
-                  <Typography color="textSecondary" variant="aside"
-                              style={{ float: "left", marginTop: "10px", marginTop: "-5px" }}>
+                  <Lens style={{
+                    width: '50px', height: '50px', float: 'left', marginLeft: '10px', marginTop: '-10px',
+                  }}
+                  />
+                  <Typography
+                    color="textSecondary"
+                    variant="body1"
+                    style={{ float: 'left', marginTop: '10px' }}
+                  >
                     <strong>{this.props.lastPatient4.name}</strong><br />{this.props.lastPatient4.surname}
                   </Typography>
-                  <Grid item>
-                  </Grid>
+                  <Grid item />
                 </Grid>
               </Grid>
             </Grid>
-            <Grid container justify="center">
-            </Grid>
+            <Grid container justify="center" />
           </CardContent>
         </Collapse>
       </Card>
-    )
+    );
   }
 }
 

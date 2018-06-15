@@ -13,7 +13,7 @@ const styles = (theme) => {
 class PatientDBSearch extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { filter: '', };
+    this.state = { filter: '' };
   }
 
   handleChange = name => event => {
@@ -27,16 +27,14 @@ class PatientDBSearch extends React.Component {
         <DashboardSection title="Find a collague">
           <Typography color="textSecondary" variant="caption" style={{ display: 'inline' }}>Insert the information of
             the collague</Typography>
-          <Grid container justify="space-between" alignItems="left" spacing={24}>
+          <Grid container justify="space-between" alignItems="stretch" spacing={24}>
             <Grid item>
               <TextField
-                floatingLabelFixed={true}
                 label="Name or Username"
               />
             </Grid>
             <Grid item>
               <TextField
-                floatingLabelFixed={true}
                 label="Surname"
               />
             </Grid>
@@ -52,14 +50,14 @@ class PatientDBSearch extends React.Component {
                       id: 'filter',
                     }}
                   >
-                    <option value={"Select profession, specialization or usergroup from the list"}>Select profession,
+                    <option value={'Select profession, specialization or usergroup from the list'}>Select profession,
                       specialization or usergroup from the list
                     </option>
-                    <option value={"Surgeon"}>Surgeon</option>
-                    <option value={"Ophtalmologist"}>Ophtalmologist</option>
-                    <option value={"Pneumologist"}>Pneumologist</option>
+                    <option value={'Surgeon'}>Surgeon</option>
+                    <option value={'Ophtalmologist'}>Ophtalmologist</option>
+                    <option value={'Pneumologist'}>Pneumologist</option>
                   </Select>
-                  {this.state.filter === "" ? <FormHelperText>Profession / Specialization/Usergroup</FormHelperText> :
+                  {this.state.filter === '' ? <FormHelperText>Profession / Specialization/Usergroup</FormHelperText> :
                     <div />}
                 </FormControl>
               </FormControl>

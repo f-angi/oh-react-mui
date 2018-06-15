@@ -29,15 +29,22 @@ const WardDetails = props => (
         <Header username={props.username} hospitalName={props.hospitalName} value={4} />
         <Paper elevation={4} className={props.classes.appFramePaper}>
           <WardDetailsBar />
-          <div style={{ float: "left", fontSize: "30px", color: "orange", textDecoration: "underline" }}>Inpatient
+          <div style={{ float: 'left', fontSize: '30px', color: 'orange', textDecoration: 'underline' }}>Inpatient
             department
           </div>
-          <div style={{ float: "left", fontSize: "30px", color: "orange", marginLeft: "50px" }}>Outpatient department
+          <div style={{ float: 'left', fontSize: '30px', color: 'orange', marginLeft: '50px' }}>Outpatient department
           </div>
           <Grid container spacing={24}>
             <Grid item xs={12}>
-              <WardDetailsSummary patients="14" patientsToday="2" patientsMonth="12" bor="46%" avgLos="3.5" totBor="68%"
-                                  avgLos2="4.7" />
+              <WardDetailsSummary
+                patients="14"
+                patientsToday="2"
+                patientsMonth="12"
+                bor="46%"
+                avgLos="3.5"
+                totBor="68%"
+                avgLos2="4.7"
+              />
               <br />
               <WardDetailsSearch />
             </Grid>
@@ -60,52 +67,124 @@ const WardDetails = props => (
                   />
                 </Grid>
                 <Grid item>
-                  <PatientDBCard pid="32040" opd="8937821" sex="male" lastAddition="01.01.2000"
-                                 reason="Pneumonia and malnutrition" treatment="Pneumond and malnutrition"
-                                 chronic="true" lastDoctor="Greys" type="Pneumologist" phoneNumber="34538290432"
-                                 mail="greys@gmail.com" />
+                  <PatientDBCard
+                    pid="32040"
+                    opd="8937821"
+                    sex="male"
+                    lastAddition="01.01.2000"
+                    reason="Pneumonia and malnutrition"
+                    treatment="Pneumond and malnutrition"
+                    chronic="true"
+                    lastDoctor="Greys"
+                    type="Pneumologist"
+                    phoneNumber="34538290432"
+                    mail="greys@gmail.com"
+                  />
                 </Grid>
                 <Grid item>
-                  <PatientDBCard pid="32040" opd="8937821" sex="male" lastAddition="01.01.2000"
-                                 reason="Pneumonia and malnutrition" treatment="Pneumond and malnutrition"
-                                 chronic="true" lastDoctor="Greys" type="Pneumologist" phoneNumber="34538290432"
-                                 mail="greys@gmail.com" />
+                  <PatientDBCard
+                    pid="32040"
+                    opd="8937821"
+                    sex="male"
+                    lastAddition="01.01.2000"
+                    reason="Pneumonia and malnutrition"
+                    treatment="Pneumond and malnutrition"
+                    chronic="true"
+                    lastDoctor="Greys"
+                    type="Pneumologist"
+                    phoneNumber="34538290432"
+                    mail="greys@gmail.com"
+                  />
                 </Grid>
                 <Grid item>
-                  <PatientDBCard pid="32040" opd="8937821" sex="male" lastAddition="01.01.2000"
-                                 reason="Pneumonia and malnutrition" treatment="Pneumond and malnutrition"
-                                 chronic="true" lastDoctor="Greys" type="Pneumologist" phoneNumber="34538290432"
-                                 mail="greys@gmail.com" />
+                  <PatientDBCard
+                    pid="32040"
+                    opd="8937821"
+                    sex="male"
+                    lastAddition="01.01.2000"
+                    reason="Pneumonia and malnutrition"
+                    treatment="Pneumond and malnutrition"
+                    chronic="true"
+                    lastDoctor="Greys"
+                    type="Pneumologist"
+                    phoneNumber="34538290432"
+                    mail="greys@gmail.com"
+                  />
                 </Grid>
                 <Grid item>
-                  <PatientDBCard pid="32040" opd="8937821" sex="male" lastAddition="01.01.2000"
-                                 reason="Pneumonia and malnutrition" treatment="Pneumond and malnutrition"
-                                 chronic="true" lastDoctor="Greys" type="Pneumologist" phoneNumber="34538290432"
-                                 mail="greys@gmail.com" />
+                  <PatientDBCard
+                    pid="32040"
+                    opd="8937821"
+                    sex="male"
+                    lastAddition="01.01.2000"
+                    reason="Pneumonia and malnutrition"
+                    treatment="Pneumond and malnutrition"
+                    chronic="true"
+                    lastDoctor="Greys"
+                    type="Pneumologist"
+                    phoneNumber="34538290432"
+                    mail="greys@gmail.com"
+                  />
                 </Grid>
                 <Grid item>
-                  <PatientDBCard pid="32040" opd="8937821" sex="male" lastAddition="01.01.2000"
-                                 reason="Pneumonia and malnutrition" treatment="Pneumond and malnutrition"
-                                 chronic="true" lastDoctor="Greys" type="Pneumologist" phoneNumber="34538290432"
-                                 mail="greys@gmail.com" />
+                  <PatientDBCard
+                    pid="32040"
+                    opd="8937821"
+                    sex="male"
+                    lastAddition="01.01.2000"
+                    reason="Pneumonia and malnutrition"
+                    treatment="Pneumond and malnutrition"
+                    chronic="true"
+                    lastDoctor="Greys"
+                    type="Pneumologist"
+                    phoneNumber="34538290432"
+                    mail="greys@gmail.com"
+                  />
                 </Grid>
                 <Grid item>
-                  <PatientDBCard pid="32040" opd="8937821" sex="male" lastAddition="01.01.2000"
-                                 reason="Pneumonia and malnutrition" treatment="Pneumond and malnutrition"
-                                 chronic="true" lastDoctor="Greys" type="Pneumologist" phoneNumber="34538290432"
-                                 mail="greys@gmail.com" />
+                  <PatientDBCard
+                    pid="32040"
+                    opd="8937821"
+                    sex="male"
+                    lastAddition="01.01.2000"
+                    reason="Pneumonia and malnutrition"
+                    treatment="Pneumond and malnutrition"
+                    chronic="true"
+                    lastDoctor="Greys"
+                    type="Pneumologist"
+                    phoneNumber="34538290432"
+                    mail="greys@gmail.com"
+                  />
                 </Grid>
                 <Grid item>
-                  <PatientDBCard pid="32040" opd="8937821" sex="male" lastAddition="01.01.2000"
-                                 reason="Pneumonia and malnutrition" treatment="Pneumond and malnutrition"
-                                 chronic="true" lastDoctor="Greys" type="Pneumologist" phoneNumber="34538290432"
-                                 mail="greys@gmail.com" />
+                  <PatientDBCard
+                    pid="32040"
+                    opd="8937821"
+                    sex="male"
+                    lastAddition="01.01.2000"
+                    reason="Pneumonia and malnutrition"
+                    treatment="Pneumond and malnutrition"
+                    chronic="true"
+                    lastDoctor="Greys"
+                    type="Pneumologist"
+                    phoneNumber="34538290432"
+                    mail="greys@gmail.com"
+                  />
                 </Grid>
                 <Grid item>
-                  <PatientDBCard pid="32040" opd="8937821" sex="male" lastAddition="01.01.2000"
-                                 reason="Pneumonia and malnutrition" treatment="Pneumond and malnutrition"
-                                 chronic="true" lastDoctor="Greys" type="Pneumologist" phoneNumber="34538290432"
-                                 mail="greys@gmail.com" />
+                  <PatientDBCard
+                    pid="32040"
+                    opd="8937821"
+                    sex="male"
+                    lastAddition="01.01.2000"
+                    reason="Pneumonia and malnutrition"
+                    treatment="Pneumond and malnutrition"
+                    chronic="true"
+                    lastDoctor="Greys"
+                    type="Pneumologist"
+                    phoneNumber="34538290432"
+                    mail="greys@gmail.com"
+                  />
                 </Grid>
               </Grid>
             </Grid>

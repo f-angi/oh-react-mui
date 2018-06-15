@@ -14,7 +14,7 @@ import {
   DialogContent,
   TextField,
   DialogActions,
-  Button
+  Button,
 } from '@material-ui/core';
 
 import HeaderLinks from './HeaderLinks';

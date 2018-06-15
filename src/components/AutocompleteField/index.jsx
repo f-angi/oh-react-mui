@@ -7,7 +7,7 @@ export default class AutocompleteField extends React.Component {
     super(props);
     this.state = {
       value: '',
-      suggestions: []
+      suggestions: [],
     };
   }
 
@@ -38,24 +38,24 @@ export default class AutocompleteField extends React.Component {
 
   onChange = (_, { newValue }) => {
     this.setState({
-      value: newValue
+      value: newValue,
     });
   };
 
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({
-      suggestions: this.getSuggestions(value)
+      suggestions: this.getSuggestions(value),
     });
   };
 
   onSuggestionsClearRequested = () => {
     this.setState({
-      suggestions: []
+      suggestions: [],
     });
   };
 
   render() {
-    const { id, placeholder } = this.props;
+    const { id placeholder } = this.props;
     const { value, suggestions } = this.state;
     const inputProps = {
       placeholder,

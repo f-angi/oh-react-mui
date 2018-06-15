@@ -20,7 +20,7 @@ class NewsDetailsBar extends React.Component {
     super(props);
     this.state = { visibility: true }
     this.handleChange = this.handleChange.bind(this);
-    window.addEventListener("resize", this.handleChange);
+    window.addEventListener('resize', this.handleChange);
   }
 
   handleChange() {
@@ -39,14 +39,14 @@ class NewsDetailsBar extends React.Component {
           </Grid>
         </Grid>
         <br />
-        <Typography variant="headline" style={{ float: 'left', fontWeight: "700" }}>News details</Typography>
+        <Typography variant="headline" style={{ float: 'left', fontWeight: '700' }}>News details</Typography>
         <Button style={{
-          float: "right",
-          backgroundColor: "rgb(239, 156, 102)",
-          color: "white",
-          marginTop: "-5px"
+          float: 'right',
+          backgroundColor: 'rgb(239, 156, 102)',
+          color: 'white',
+          marginTop: '-5px',
         }}><NoteAdd />
-          {this.state.visibility ? "Write a news" : ""}
+          {this.state.visibility ? 'Write a news' : ''}
         </Button>
         <br />
         <br />

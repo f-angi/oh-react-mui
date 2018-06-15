@@ -4,7 +4,7 @@ import MomentUtils from 'material-ui-pickers/utils/moment-utils';
 import { MuiPickersUtilsProvider } from 'material-ui-pickers';
 import theme from './theme';
 import './App.css';
-import Dashboard from './scenes/Dashboard/index';
+import Dashboard from './scenes/Dashboard';
 
 const App = () => (
   <MuiPickersUtilsProvider utils={MomentUtils}>

@@ -20,14 +20,14 @@ const NewsDetailsCard = props => (
   <div>
     <Card>
       <CardContent>
-        <div style={{ fontSize: "16px" }}>
+        <div style={{ fontSize: '16px' }}>
           Written by: {props.author}  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;{props.date}
         </div>
-        <div style={{ fontWeight: "700", fontSize: "32px" }}>{props.title}</div>
+        <div style={{ fontWeight: '700', fontSize: '32px' }}>{props.title}</div>
         <img
           src="https://farm5.staticflickr.com/4201/34419908534_43217ace18_z.jpg"
-          alt={"img"}
-          style={{ width: "100%", height: "auto" }}
+          alt={'img'}
+          style={{ width: '100%', height: 'auto' }}
         />
         <div>{props.text}</div>
       </CardContent>

@@ -9,7 +9,7 @@ const styles = (theme) => {
 class NewsFilter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { filter: "" };
+    this.state = { filter: '' };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -20,9 +20,9 @@ class NewsFilter extends React.Component {
   render() {
     return (
       <Grid container>
-        <Grid item style={{ fontSize: "12px", float: "left", marginTop: "-50px" }}>
+        <Grid item style={{ fontSize: '12px', float: 'left', marginTop: '-50px' }}>
           Filter
-          <FormControl style={{ marginLeft: "15px" }}>
+          <FormControl style={{ marginLeft: '15px' }}>
             <FormControl>
               <Select
                 native
@@ -32,8 +32,8 @@ class NewsFilter extends React.Component {
                   id: 'filter',
                 }}
               >
-                <option value={"Most-recent"}>Most recent</option>
-                <option value={"Last-update"}>Last update</option>
+                <option value={'Most-recent'}>Most recent</option>
+                <option value={'Last-update'}>Last update</option>
               </Select>
             </FormControl>
           </FormControl>

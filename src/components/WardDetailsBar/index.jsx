@@ -19,7 +19,7 @@ class WardDetailsBar extends React.Component {
     super(props);
     this.state = { visibility: true }
     this.handleChange = this.handleChange.bind(this);
-    window.addEventListener("resize", this.handleChange);
+    window.addEventListener('resize', this.handleChange);
   }
 
   handleChange() {
@@ -34,12 +34,12 @@ class WardDetailsBar extends React.Component {
       <div>
         <Grid container alignItems="center" spacing={8}>
           <Grid item>
-            <Typography variant="subheadline">Home / Ward Details</Typography>
+            <Typography variant="subheading">Home / Ward Details</Typography>
           </Grid>
         </Grid>
         <br />
-        <Typography variant="headline" style={{ float: 'left', fontWeight: "700" }}>Ward Details</Typography>
-        <Grid container style={{ width: "70%", marginLeft: "30%" }} justify="flex-end">
+        <Typography variant="headline" style={{ float: 'left', fontWeight: '700' }}>Ward Details</Typography>
+        <Grid container style={{ width: '70%', marginLeft: '30%' }} justify="flex-end">
         </Grid>
         <br />
         <br />

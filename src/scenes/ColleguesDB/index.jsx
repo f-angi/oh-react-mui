@@ -20,7 +20,7 @@ const styles = theme => ({
     }),
 });
 
-var lastPatient = { name: "Modotoky", surname: "tokai" };
+var lastPatient = { name: 'Modotoky', surname: 'tokai' };
 
 const ColleguesDB = props => (
   <div>

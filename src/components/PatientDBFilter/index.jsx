@@ -9,7 +9,7 @@ import {
   InputLabel,
   FormControl,
   Select,
-  FormHelperText
+  FormHelperText,
 } from '@material-ui/core';
 import DashboardSection from '../DashboardSection';
 import TextField from '@material-ui/core/TextField';
@@ -60,7 +60,7 @@ class PatientDBFilter extends React.Component {
       <div>
         <DashboardSection title="Which patient are you searching for?">
 
-          <Grid container alignItems="left" spacing={40} justify="flex-start" direction="row">
+          <Grid container alignItems="stretch" spacing={40} justify="flex-start" direction="row">
             <Grid item xs>
               <div style={{ margin: 10 }}>
                 <Typography color="textSecondary" variant="caption" style={{ display: 'inline' }}>Use the filter for a
@@ -78,12 +78,12 @@ class PatientDBFilter extends React.Component {
                     }}
                   >
                     <option value="" />
-                    <option value={"Chronic-Patient"}>Chronic Patient</option>
-                    <option value={"Properly-Admission"}>Properly Admission</option>
-                    <option value={"Visited-this-month"}>Visited this month</option>
-                    <option value={"Visited-last-month"}>Visited last month</option>
+                    <option value={'Chronic-Patient'}>Chronic Patient</option>
+                    <option value={'Properly-Admission'}>Properly Admission</option>
+                    <option value={'Visited-this-month'}>Visited this month</option>
+                    <option value={'Visited-last-month'}>Visited last month</option>
                   </Select>
-                  {this.state.filter === "" ? <FormHelperText>Select the filter</FormHelperText> : <div></div>}
+                  {this.state.filter === '' ? <FormHelperText>Select the filter</FormHelperText> : <div></div>}
                 </FormControl>
               </div>
             </Grid>

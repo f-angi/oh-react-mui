@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
 
@@ -17,6 +17,7 @@ const styles = theme => ({
       paddingBottom: 16,
       marginTop: theme.spacing.unit * 3,
       backgroundColor: theme.palette.secondary.main,
+      marginBottom: '70px',
     }),
 });
 

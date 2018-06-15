@@ -67,7 +67,8 @@ const PatientSidebar = (props) => {
     <div id="resize">
       <div id="resizeTop">
         <div id="icon">
-          <img src={props.isMan ? manLogo : womanLogo} style={{ color: 'white', marginLeft: '80%' }} alt={props.isMan ? 'man' : 'woman'} />
+          <img src={props.isMan ? manLogo : womanLogo} style={{ color: 'white', marginLeft: '80%' }}
+               alt={props.isMan ? 'man' : 'woman'} />
         </div>
         <div id="resizeAvatar1">
           <Avatar

@@ -17,7 +17,9 @@ const DashboardMaterial = (props) => {
             <WarningIcon color="primary" />
           </Grid>
           <Grid item>
-            <Typography color="textSecondary" variant="caption" style={{ display: 'inline' }}>The drug is running out</Typography>
+            <Typography color="textSecondary" variant="caption" style={{ display: 'inline' }}>The drug is running
+              out
+            </Typography>
           </Grid>
         </Grid>
         <Grid container alignItems="center" justify="space-between">

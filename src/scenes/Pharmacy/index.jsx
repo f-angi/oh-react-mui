@@ -17,6 +17,7 @@ const styles = theme => ({
       paddingBottom: 16,
       marginTop: theme.spacing.unit * 3,
       backgroundColor: theme.palette.secondary.main,
+      marginBottom: '70px',
     }),
 });
 
@@ -30,7 +31,7 @@ const Pharmacy = props => (
           <Grid container spacing={24}>
             <Grid item xs={12}>
               <Grid container justify="space-between">
-                <Grid item style={{ marginRight: "10px" }}>
+                <Grid item style={{ marginRight: '10px' }}>
                   <DrugsOutOfStock
                     date="2.03.2016"
                     title="The war still causes hundreds of deaths"

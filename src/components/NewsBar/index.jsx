@@ -19,7 +19,7 @@ class NewsBar extends React.Component {
     super(props);
     this.state = { visibility: true }
     this.handleChange = this.handleChange.bind(this);
-    window.addEventListener("resize", this.handleChange);
+    window.addEventListener('resize', this.handleChange);
   }
 
   handleChange() {
@@ -34,11 +34,11 @@ class NewsBar extends React.Component {
       <div>
         <Grid container alignItems="center" spacing={8}>
           <Grid item>
-            <Typography variant="subheadline">Home / News</Typography>
+            <Typography variant="subheading">Home / News</Typography>
           </Grid>
         </Grid>
         <br />
-        <Typography variant="headline" style={{ float: 'left', fontWeight: "700" }}>News</Typography>
+        <Typography variant="headline" style={{ float: 'left', fontWeight: '700' }}>News</Typography>
         <br />
       </div>
     );

@@ -5,7 +5,7 @@ import {
   Grid,
   InputLabel,
   Select,
-  FormControl
+  FormControl,
 } from '@material-ui/core';
 
 const styles = (theme) => {
@@ -14,7 +14,7 @@ const styles = (theme) => {
 class WardDetailsFilter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { filter: "" };
+    this.state = { filter: '' };
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -26,14 +26,14 @@ class WardDetailsFilter extends React.Component {
     return (
       <Grid container>
         <Grid item>
-          <div style={{ fontWeight: "700", marginLeft: "170px", float: "left", fontSize: "20px" }}>Which admitted
+          <div style={{ fontWeight: '700', marginLeft: '170px', float: 'left', fontSize: '20px' }}>Which admitted
             patient are you searching for?
           </div>
-          <div style={{ marginLeft: "173px" }}>Use the filter for a faster search</div>
+          <div style={{ marginLeft: '173px' }}>Use the filter for a faster search</div>
         </Grid>
-        <Grid item style={{ fontSize: "12px", float: "left", marginLeft: "63.8%", marginTop: "-50px" }}>
+        <Grid item style={{ fontSize: '12px', float: 'left', marginLeft: '63.8%', marginTop: '-50px' }}>
           Filter
-          <FormControl style={{ marginLeft: "15px" }}>
+          <FormControl style={{ marginLeft: '15px' }}>
             <FormControl>
               <InputLabel>
               </InputLabel>
@@ -45,10 +45,10 @@ class WardDetailsFilter extends React.Component {
                   id: 'filter1',
                 }}
               >
-                <option value={"Admitted today"}>Admitted today</option>
-                <option value={"Admitted less than 3 days ago"}>Admitted less than 3 days ago</option>
-                <option value={"Admitted from 3 to 7 days ago"}>Admitted from 3 to 7 days ago</option>
-                <option value={"Admitted more than 7 days ago"}>Admitted more than 7 days ago</option>
+                <option value={'Admitted today'}>Admitted today</option>
+                <option value={'Admitted less than 3 days ago'}>Admitted less than 3 days ago</option>
+                <option value={'Admitted from 3 to 7 days ago'}>Admitted from 3 to 7 days ago</option>
+                <option value={'Admitted more than 7 days ago'}>Admitted more than 7 days ago</option>
               </Select>
             </FormControl>
           </FormControl>

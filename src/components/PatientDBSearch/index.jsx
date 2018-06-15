@@ -16,28 +16,24 @@ const PatientDBSearch = props => (
       <Typography color="textSecondary" variant="caption" style={{ display: 'inline' }}>Insert the information of the
         patient
       </Typography>
-      <Grid container justify="space-between" alignItems="left" spacing={24}>
+      <Grid container justify="space-between" alignItems="stretch" spacing={24}>
         <Grid item>
           <TextField
-            floatingLabelFixed={true}
             label="Patient ID (PID)"
           />
         </Grid>
         <Grid item>
           <TextField
-            floatingLabelFixed={true}
             label="Outpatient Number (OPD)"
           />
         </Grid>
         <Grid item>
           <TextField
-            floatingLabelFixed={true}
             label="Inpatient Number (IDP)"
           />
         </Grid>
         <Grid item>
           <TextField
-            floatingLabelFixed={true}
             label="Keyword"
           />
         </Grid>

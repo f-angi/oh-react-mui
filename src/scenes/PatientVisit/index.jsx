@@ -18,7 +18,7 @@ import {
   ListItemText,
   MenuItem,
   Input,
-} from "@material-ui/core";
+} from '@material-ui/core';
 import Header from '../../components/Header/index';
 import WelcomeBar from '../../components/WelcomeBar/index';
 import ChatFloatingPopup from '../../components/ChatFloatingPopup/index';
@@ -73,7 +73,7 @@ class PatientVisit extends React.Component {
     this.state = {
       checkedNO: true,
       checkedCronic: true,
-      name: []
+      name: [],
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleChangeSelect = this.handleChangeSelect.bind(this);
@@ -113,8 +113,8 @@ class PatientVisit extends React.Component {
               <Grid container spacing={24} className={classes.containerWhite}>
 
                 {/* LEFT SUBCOLOUM */}
-                <Grid item xs={6} md={2} className={"mobile-view-large"}
-                      style={{ backgroundColor: "rgba(94, 94, 94, 1)" }}>
+                <Grid item xs={6} md={2} className={'mobile-view-large'}
+                      style={{ backgroundColor: 'rgba(94, 94, 94, 1)' }}>
                   <PatientSidebar
                     patientID={'32040'} OPD={'8937821'} bloodGroup={'A+'} isMan={true}
                     patientName={this.props.patientName} patientAvatarSrc={null}
@@ -131,7 +131,7 @@ class PatientVisit extends React.Component {
                   <PatientRightMainBar
                     patientName={this.props.patientName}
                     provenance={this.props.provenance}
-                    mainTitle={"COMPLETE THE FORM"}
+                    mainTitle={'COMPLETE THE FORM'}
                   />
                   {/* REASON OF VISIT */}
                   <TextField

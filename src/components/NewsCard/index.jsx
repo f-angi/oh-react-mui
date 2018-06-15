@@ -4,9 +4,9 @@ import {
   Typography,
   CardContent,
   Collapse,
-  Divider
+  Divider,
 } from '@material-ui/core';
-import { withStyles } from "@material-ui/core/styles/index";
+import { withStyles } from '@material-ui/core/styles/index';
 
 const styles = theme => ({
   appFramePaper:
@@ -36,21 +36,21 @@ class NewsCard extends React.Component {
 
     return (
       <Card raised onClick={this.handleExpandClick}
-            style={{ width: "299px", float: "left" }}>
+            style={{ width: '299px', float: 'left' }}>
         <CardContent align="center">
-          <Typography style={{ float: "left", fontSize: "10px" }}>{this.props.date}</Typography>
+          <Typography style={{ float: 'left', fontSize: '10px' }}>{this.props.date}</Typography>
           <br />
           <Typography gutterBottom color="inherit"
-                      style={{ color: "#EF9969", fontSize: "16px" }}>{this.props.title}</Typography>
-          <Typography color="inherit" variant="subheading" noWrap style={{ float: 'left', fontSize: "10px" }}>Written
+                      style={{ color: '#EF9969', fontSize: '16px' }}>{this.props.title}</Typography>
+          <Typography color="inherit" variant="subheading" noWrap style={{ float: 'left', fontSize: '10px' }}>Written
             by {this.props.author}<br />
           </Typography>
         </CardContent>
-        <div align="center"><Divider style={{ width: "250px" }} /></div>
+        <div align="center"><Divider style={{ width: '250px' }} /></div>
         <Collapse in={this.state.expanded}>
           <CardContent align="center">
             <Typography>{this.props.text}</Typography>
-            <Typography style={{ color: "#EF9969", float: "left" }}>Read all article ></Typography>
+            <Typography style={{ color: '#EF9969', float: 'left' }}>Read all article ></Typography>
           </CardContent>
         </Collapse>
       </Card>

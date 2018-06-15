@@ -19,7 +19,7 @@ class SettingsBar extends React.Component {
     super(props);
     this.state = { visibility: true }
     this.handleChange = this.handleChange.bind(this);
-    window.addEventListener("resize", this.handleChange);
+    window.addEventListener('resize', this.handleChange);
   }
 
   handleChange() {
@@ -34,12 +34,12 @@ class SettingsBar extends React.Component {
       <div>
         <Grid container alignItems="center" spacing={8}>
           <Grid item>
-            <Typography variant="subheadline">Home / Settings</Typography>
+            <Typography variant="subheading">Home / Settings</Typography>
           </Grid>
         </Grid>
         <br />
-        <Typography variant="headline" style={{ float: 'left', fontWeight: "700" }}>Settings</Typography>
-        <Grid container style={{ width: "70%", marginLeft: "30%" }} justify="flex-end" />
+        <Typography variant="headline" style={{ float: 'left', fontWeight: '700' }}>Settings</Typography>
+        <Grid container style={{ width: '70%', marginLeft: '30%' }} justify="flex-end" />
         <br />
         <br />
       </div>
