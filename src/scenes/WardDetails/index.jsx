@@ -19,6 +19,7 @@ const styles = theme => ({
       paddingBottom: 16,
       marginTop: theme.spacing.unit * 3,
       backgroundColor: theme.palette.secondary.main,
+      marginBottom: '80px',
     }),
 });
 

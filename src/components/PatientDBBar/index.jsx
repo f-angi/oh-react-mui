@@ -25,6 +25,13 @@ class PatientDBBar extends React.Component {
     window.addEventListener('resize', this.handleChange);
   }
 
+  componentWillMount() {
+    if (window.innerWidth <= 1000)
+      this.setState({ visibility: false });
+    else
+      this.setState({ visibility: true });
+  }
+
   handleChange() {
     if (window.innerWidth <= 1000)
       this.setState({ visibility: false });

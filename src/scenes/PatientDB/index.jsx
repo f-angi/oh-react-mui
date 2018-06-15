@@ -11,17 +11,18 @@ import PatientDBFilter from '../../components/PatientDBFilter';
 import PatientDBBar from '../../components/PatientDBBar';
 import PatientDBCard from '../../components/PatientDBCard';
 
-const styles = theme => ({
+const styles = theme => (
+  {
     appFramePaper:
       theme.mixins.gutters({
         paddingTop: 16,
         paddingBottom: 16,
         marginTop: theme.spacing.unit * 3,
         backgroundColor: theme.palette.secondary.main,
-        marginBottom: '70px',
+        marginBottom: '80px',
       }),
-  })
-;
+  }
+);
 
 const PatientDB = props => (
   <div>
