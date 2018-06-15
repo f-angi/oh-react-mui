@@ -31,7 +31,7 @@ class LoginCredentials extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <Grid item container spacing={16} alignItems="center" direction="column">
+      <Grid container spacing={16} alignItems="center">
         <Grid item>
           <div className={classes.margin}>
             <img src="../../logo_OH_small.png" alt="logo" /></div>
