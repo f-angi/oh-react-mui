@@ -31,7 +31,7 @@ class DashboardAppointment extends React.Component {
   }
 
   handleChange() {
-    this.setState({checked: !this.state.checked});
+    this.setState({ checked: !this.state.checked });
   }
 
   render() {

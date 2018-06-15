@@ -14,9 +14,9 @@ import {
   InputLabel,
   Paper,
   Select,
-  TextField
+  TextField,
 } from '@material-ui/core';
-import { InsertPhoto, PhotoCamera } from "@material-ui/icons/es/index";
+import { InsertPhoto, PhotoCamera } from '@material-ui/icons';
 
 const styles = theme => ({
   appFramePaper:
@@ -37,7 +37,7 @@ const styles = theme => ({
   },
   buttonInlineDuo: {
     margin: theme.spacing.unit,
-    width: "44%"
+    width: '44%',
   },
   formControl: {
     margin: theme.spacing.unit,
@@ -50,31 +50,31 @@ const styles = theme => ({
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: "93%",
+    width: '93%',
   },
   textFieldThree: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: "28%",
+    width: '28%',
   },
   menu: {
     width: 200,
   },
   containerWhite: {
-    backgroundColor: "white",
-    boxShadow: "0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-    marginBottom: "70px"
+    backgroundColor: 'white',
+    boxShadow: '0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12)',
+    marginBottom: '70px',
   },
   titles: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-  }
+  },
 });
 
 // Array per select gruppo sanguigno
-const bloodGroup = ["", "0+", "0-", "A+", "A-", "B+", "B-", "C+", "C-", "AB+", "AB-"];
+const bloodGroup = ['', '0+', '0-', 'A+', 'A-', 'B+', 'B-', 'C+', 'C-', 'AB+', 'AB-'];
 
-class AppFrame extends React.Component {
+class PatientRegistration extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -85,18 +85,18 @@ class AppFrame extends React.Component {
   }
 
   handleChangeTransport = name => event => {
-    this.setState({[name]: event.target.checked});
+    this.setState({ [name]: event.target.checked });
   };
 
   render() {
-    const {classes} = this.props;
+    const { classes } = this.props;
     return (
       <div>
         <Grid container justify="center" alignItems="stretch">
           <Grid item xs={12} lg={10}>
-            <Header username={this.props.username} hospitalName={this.props.hospitalName}/>
+            <Header username={this.props.username} hospitalName={this.props.hospitalName} value={1} />
             <Paper elevation={4} className={classes.appFramePaper}>
-              <WelcomeBar path={"Home / Patient Registration"} txt={""}/>
+              <WelcomeBar path={'Home / Patient Database / Patient Registration'} txt={''} />
               <Grid container spacing={24} className={classes.containerWhite}>
                 <Grid item xs={6} md={2}>
                   <h4>NEW PATIENT REGISTRATION</h4>
@@ -116,7 +116,7 @@ class AppFrame extends React.Component {
                       <input
                         accept="image/*"
                         className={classes.input}
-                        style={{display: "none"}}
+                        style={{ display: 'none' }}
                         id="raised-button-file"
                         type="file"
                       />
@@ -126,7 +126,7 @@ class AppFrame extends React.Component {
                           Take a photo of the patient
                           <IconButton color="primary" className={classes.button}
                                       component="span">
-                            <PhotoCamera/>
+                            <PhotoCamera />
                           </IconButton>
                         </Button>
                       </label>
@@ -137,10 +137,10 @@ class AppFrame extends React.Component {
                         Go to gallery
                         <IconButton color="primary" className={classes.button}
                                     component="span">
-                          <InsertPhoto/>
+                          <InsertPhoto />
                         </IconButton>
                       </Button>
-                      <br/>
+                      <br />
                       {/* FIRST NAME */}
                       <TextField
                         required
@@ -148,15 +148,15 @@ class AppFrame extends React.Component {
                         label="First Name"
                         className={classes.textField}
                         margin="normal"
-                        color={"primary"}
+                        color={'primary'}
                       />
-                      <br/>
+                      <br />
                       {/* AGE */}
                       <TextField
                         required
                         id="age-yyy"
                         label="Age"
-                        placeholder={"Years"}
+                        placeholder={'Years'}
                         //onChange={this.handleChange('age')}
                         type="number"
                         className={classes.textFieldThree}
@@ -169,7 +169,7 @@ class AppFrame extends React.Component {
                       <TextField
                         required
                         id="age-mm"
-                        placeholder={"Months"}
+                        placeholder={'Months'}
                         //onChange={this.handleChange('age')}
                         type="number"
                         className={classes.textFieldThree}
@@ -181,7 +181,7 @@ class AppFrame extends React.Component {
                       <TextField
                         required
                         id="age-dd"
-                        placeholder={"Days"}
+                        placeholder={'Days'}
                         //onChange={this.handleChange('age')}
                         type="number"
                         className={classes.textFieldThree}
@@ -195,16 +195,16 @@ class AppFrame extends React.Component {
                         required
                         id="birthdate"
                         label="Birthdate"
-                        placeholder={"yyyy/mm/dd"}
+                        placeholder={'yyyy/mm/dd'}
                         //onChange={this.handleChange('age')}
                         type="date"
                         className={classes.textField}
                         InputLabelProps={{
-                          shrink: true
+                          shrink: true,
                         }}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* TAX NUMBER */}
                       <TextField
                         required
@@ -213,7 +213,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* CITY */}
                       <TextField
                         required
@@ -222,7 +222,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* CONTACT */}
                       <TextField
                         required
@@ -231,7 +231,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* NEXT OF KIN */}
                       <TextField
                         required
@@ -240,7 +240,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
 
                     </Grid>
 
@@ -249,8 +249,8 @@ class AppFrame extends React.Component {
                       {/* SEX SELECT */}
                       <FormControl required className={classes.formControl}
                                    style={{
-                                     marginBottom: "40px",
-                                     marginTop: "20px"
+                                     marginBottom: '40px',
+                                     marginTop: '20px',
                                    }}
                       >
                         <InputLabel required htmlFor="sex-native-simple">Sex</InputLabel>
@@ -261,12 +261,12 @@ class AppFrame extends React.Component {
                             id: 'sex-native-simple',
                           }}
                         >
-                          <option value=""/>
-                          <option value={"M"}>M</option>
-                          <option value={"F"}>F</option>
+                          <option value="" />
+                          <option value={'M'}>M</option>
+                          <option value={'F'}>F</option>
                         </Select>
                       </FormControl>
-                      <br/>
+                      <br />
                       {/* OTHER NAME */}
                       <TextField
                         required
@@ -275,7 +275,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* OTHER NUMBER */}
                       <TextField
                         required
@@ -284,7 +284,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* ADDRESS */}
                       <TextField
                         required
@@ -293,7 +293,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* NEXT OF KIN CONTACT */}
                       <TextField
                         required
@@ -302,10 +302,10 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
 
                       {/* OPTIONAL FIELDS */}
-                      <h3 style={{marginTop: "30px"}} className={classes.titles}>
+                      <h3 style={{ marginTop: '30px' }} className={classes.titles}>
                         Other optional information</h3>
                       {/* RELATIONSHIP */}
                       <TextField
@@ -314,7 +314,7 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
                       {/* INSURANCE */}
                       <TextField
                         id="insurance"
@@ -333,11 +333,11 @@ class AppFrame extends React.Component {
                           }}
                         >
                           {bloodGroup.map((val, index) =>
-                            <option value={val} key={index}>{`${val}`}</option>
+                            <option value={val} key={index}>{val}</option>,
                           )}
                         </Select>
                       </FormControl>
-                      <br/>
+                      <br />
                       {/* EDUCATIONAL LEVEL */}
                       <TextField
                         id="educational-level"
@@ -345,15 +345,15 @@ class AppFrame extends React.Component {
                         className={classes.textField}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
 
                       {/* DISTANCE FROM THE HOSPITAL BLOCK THREE INPUT */}
-                      <h5 style={{marginTop: "25px"}} className={classes.titles}>
+                      <h5 style={{ marginTop: '25px' }} className={classes.titles}>
                         Distance of the house from the Hospital
                       </h5>
                       <TextField
                         id="distance-house-hospital-dd"
-                        placeholder={"dd"}
+                        placeholder={'dd'}
                         //onChange={this.handleChange('age')}
                         type="number"
                         className={classes.textFieldThree}
@@ -364,7 +364,7 @@ class AppFrame extends React.Component {
                       />
                       <TextField
                         id="distance-house-hospital-hh"
-                        placeholder={"hh"}
+                        placeholder={'hh'}
                         //onChange={this.handleChange('age')}
                         type="number"
                         className={classes.textFieldThree}
@@ -375,7 +375,7 @@ class AppFrame extends React.Component {
                       />
                       <TextField
                         id="distance-house-hospital-mm"
-                        placeholder={"mm"}
+                        placeholder={'mm'}
                         //onChange={this.handleChange('age')}
                         type="number"
                         className={classes.textFieldThree}
@@ -384,11 +384,11 @@ class AppFrame extends React.Component {
                         }}
                         margin="normal"
                       />
-                      <br/>
+                      <br />
 
                       {/*BLOCK THREE ELEMENT TRANSPORT */}
                       <FormControlLabel
-                        style={{marginLeft: "-10px"}}
+                        style={{ marginLeft: '-10px' }}
                         className={classes.textFieldThree}
                         control={
                           <Checkbox
@@ -426,14 +426,14 @@ class AppFrame extends React.Component {
                         }
                         label="Transport3"
                       />
-                      <br/>
+                      <br />
                       {/* SAVE AND START VISIT BUTTON */}
                       <Button variant="raised" component="span"
                               className={classes.buttonInlineDuo}
                               style={{
-                                marginTop: "15px",
-                                backgroundColor: "rgba(239, 156, 102, 1)",
-                                color: "#FFFFFF",
+                                marginTop: '15px',
+                                backgroundColor: 'rgba(239, 156, 102, 1)',
+                                color: '#FFFFFF',
                               }}>
                         Save and start a visit >
                       </Button>
@@ -441,9 +441,9 @@ class AppFrame extends React.Component {
                       <Button variant="raised" component="span"
                               className={classes.buttonInlineDuo}
                               style={{
-                                marginTop: "15px",
+                                marginTop: '15px',
                                 borderColor: '#rgba(239, 156, 102, 1)',
-                                color: "rgba(239, 156, 102, 1)"
+                                color: 'rgba(239, 156, 102, 1)',
                               }}>
                         Save the information ›
                       </Button>
@@ -454,21 +454,14 @@ class AppFrame extends React.Component {
             </Paper>
           </Grid>
         </Grid>
-        <ChatFloatingPopup/>
+        <ChatFloatingPopup />
       </div>
     )
   }
 }
 
-// AppFrame.defaultProps = {
-//   classes: {},
-//   title: 'HelpDesk',
-//   breadcrumbs: [],
-//   children: null,
-// };
-
-AppFrame.propTypes = {
-  classes: PropTypes.object.isRequired
+PatientRegistration.propTypes = {
+  classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(AppFrame);
+export default withStyles(styles)(PatientRegistration);

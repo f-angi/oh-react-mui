@@ -27,7 +27,7 @@ const ChatFloatingPopup = props => (
   <Grid container justify="flex-end">
     <Grid item xs={11} />
     <Grid item xs={1}>
-      <Paper elevation={12} className={props.classes.root}>
+      <Paper elevation={16} className={props.classes.root}>
         <Grid container justify="space-around" alignItems="center">
           <Grid item xs={10}>
             <Typography variant="body1">Chat (8)</Typography>
