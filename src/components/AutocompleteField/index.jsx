@@ -55,7 +55,7 @@ export default class AutocompleteField extends React.Component {
   };
 
   render() {
-    const { id placeholder } = this.props;
+    const { id, placeholder } = this.props;
     const { value, suggestions } = this.state;
     const inputProps = {
       placeholder,
